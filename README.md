@@ -1,5 +1,17 @@
 # CSC3007-project
 
-Aloysius Chia Mu Rong 1900640 <br>
-Angela Lui An Chi 1901852 <br>
-Khloe Lim Xin Hui 1901865 <br>
+## Introduction
+This project is broken into two milestones:
+* Milestone One requires the team to go through and critique/validate a visualization case study and present to the audience the problems in the visualization and how it can be fixed.
+* Milestone Two is to choose either one of the problems presented in Milestone One (e.g., fixing the problem) to improvise it.
+
+### Learning Objectives
+* To gain experience designing a moderately complex visualization.
+* To gain experience working in a development team.
+
+### Team Members
+| Name                            | Student ID      |
+| ------------------------------- | --------------- |
+| Aloysius Chia Mu Rong (Leader)  | 1900640         |
+| Angela Lui An Chi               | 1901852         |
+| Khloe Lim Xin Hui               | 1901865         |

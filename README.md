@@ -10,8 +10,9 @@ This project is broken into two milestones:
 * To gain experience working in a development team.
 
 ### Team Members
+
 | Name                            | Student ID      |
-| ------------------------------- | --------------- |
+|---------------------------------|-----------------|
 | Aloysius Chia Mu Rong (Leader)  | 1900640         |
 | Angela Lui An Chi               | 1901852         |
 | Khloe Lim Xin Hui               | 1901865         |

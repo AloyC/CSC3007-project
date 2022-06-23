@@ -16,3 +16,9 @@ This project is broken into two milestones:
 | Aloysius Chia Mu Rong (Leader)  | 1900640         |
 | Angela Lui An Chi               | 1901852         |
 | Khloe Lim Xin Hui               | 1901865         |
+
+### Timeline
+* Milestone 1
+  * Please refer to this set of [presentation deck](https://github.com/AloyC/CSC3007-project/blob/main/milestone-1/CSC3007-P2-3-milestone1.pdf) for submission of Milestone 1.
+* Milestone 2
+  * Still in-progress.

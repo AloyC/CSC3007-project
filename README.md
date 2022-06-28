@@ -19,6 +19,6 @@ This project is broken into two milestones:
 
 ### Timeline
 * Milestone 1
-  * Please refer to this set of [presentation deck](https://github.com/AloyC/CSC3007-project/blob/main/milestone-1/CSC3007-P2-3-milestone1.pdf) for submission of Milestone 1.
+  * Please refer to this set of [presentation deck](https://docs.google.com/presentation/d/1MfrH9M0evgnUsW4QM6q2Z-51f7oTXf3N1CHPAF27JfI/edit?usp=sharing) for submission of Milestone 1.
 * Milestone 2
   * Still in-progress.

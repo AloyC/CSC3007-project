@@ -1,5 +1,5 @@
 async function fetchAPI(month,date,time) {
-    let response = await fetch(`https://api.data.gov.sg/v1/transport/carpark-availability?date_time=2021-${month}-${date}T${time}%3A00%3A00`)
+    let response = await fetch(`https://api.data.gov.sg/v1/transport/carpark-availability?date_time=2020-${month}-${date}T${time}%3A00%3A00`)
 
     // Check if able to retrieve data
     if (response.status === 200) {

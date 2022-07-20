@@ -1,0 +1,542 @@
+[
+ {
+   "week": "Wk 1 Mar",
+   "hour": "9am",
+   "value": 3050455,
+   "Percentage": "62%"
+ },
+ {
+   "week": "Wk 1 Mar",
+   "hour": "12pm",
+   "value": 3197411,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 1 Mar",
+   "hour": "3pm",
+   "value": 3207799,
+   "Percentage": "65%"
+ },
+ {
+   "week": "Wk 1 Mar",
+   "hour": "6pm",
+   "value": 3052639,
+   "Percentage": "62%"
+ },
+ {
+   "week": "Wk 1 Mar",
+   "hour": "9pm",
+   "value": 2561201,
+   "Percentage": "52%"
+ },
+ {
+   "week": "Wk 2 Mar",
+   "hour": "9am",
+   "value": 3022488,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 2 Mar",
+   "hour": "12pm",
+   "value": 3179328,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 2 Mar",
+   "hour": "3pm",
+   "value": 3187236,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 2 Mar",
+   "hour": "6pm",
+   "value": 3037274,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 2 Mar",
+   "hour": "9pm",
+   "value": 2554087,
+   "Percentage": "51%"
+ },
+ {
+   "week": "Wk 3 Mar",
+   "hour": "9am",
+   "value": 2982820,
+   "Percentage": "60%"
+ },
+ {
+   "week": "Wk 3 Mar",
+   "hour": "12pm",
+   "value": 3144237,
+   "Percentage": "63%"
+ },
+ {
+   "week": "Wk 3 Mar",
+   "hour": "3pm",
+   "value": 3172654,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 3 Mar",
+   "hour": "6pm",
+   "value": 3026298,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 3 Mar",
+   "hour": "9pm",
+   "value": 2574403,
+   "Percentage": "52%"
+ },
+ {
+   "week": "Wk 4 Mar",
+   "hour": "9am",
+   "value": 3020342,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 4 Mar",
+   "hour": "12pm",
+   "value": 3020342,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 4 Mar",
+   "hour": "3pm",
+   "value": 3180332,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 4 Mar",
+   "hour": "6pm",
+   "value": 3033822,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 4 Mar",
+   "hour": "9pm",
+   "value": 2567733,
+   "Percentage": "52%"
+ },
+ {
+   "week": "Wk 5 Mar",
+   "hour": "9am",
+   "value": 3019429,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 5 Mar",
+   "hour": "12pm",
+   "value": 3166995,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 5 Mar",
+   "hour": "3pm",
+   "value": 3183161,
+   "Percentage": "64%"
+ },
+ {
+   "week": "Wk 5 Mar",
+   "hour": "6pm",
+   "value": 3022004,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 5 Mar",
+   "hour": "9pm",
+   "value": 2574417,
+   "Percentage": "52%"
+ },
+ {
+   "week": "Wk 1 Apr",
+   "hour": "9am",
+   "value": 2677256,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 1 Apr",
+   "hour": "12pm",
+   "value": 2737531,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 1 Apr",
+   "hour": "3pm",
+   "value": 2761324,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 1 Apr",
+   "hour": "6pm",
+   "value": 2681767,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 1 Apr",
+   "hour": "9pm",
+   "value": 2426294,
+   "Percentage": "49%"
+ },
+ {
+   "week": "Wk 2 Apr",
+   "hour": "9am",
+   "value": 2644190,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 2 Apr",
+   "hour": "12pm",
+   "value": 2714534,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 2 Apr",
+   "hour": "3pm",
+   "value": 2701799,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 2 Apr",
+   "hour": "6pm",
+   "value": 2614582,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 2 Apr",
+   "hour": "9pm",
+   "value": 2390630,
+   "Percentage": "48%"
+ },
+ {
+   "week": "Wk 3 Apr",
+   "hour": "9am",
+   "value": 2641444,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 3 Apr",
+   "hour": "12pm",
+   "value": 2732446,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 3 Apr",
+   "hour": "3pm",
+   "value": 2706750,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 3 Apr",
+   "hour": "6pm",
+   "value": 2629451,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 3 Apr",
+   "hour": "9pm",
+   "value": 2503139,
+   "Percentage": "51%"
+ },
+ {
+   "week": "Wk 4 Apr",
+   "hour": "9am",
+   "value": 2582438,
+   "Percentage": "52%"
+ },
+ {
+   "week": "Wk 4 Apr",
+   "hour": "12pm",
+   "value": 2666283,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 4 Apr",
+   "hour": "3pm",
+   "value": 2674800,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 4 Apr",
+   "hour": "6pm",
+   "value": 2603742,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 4 Apr",
+   "hour": "9pm",
+   "value": 2416467,
+   "Percentage": "49%"
+ },
+ {
+   "week": "Wk 1 May",
+   "hour": "9am",
+   "value": 2601701,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 1 May",
+   "hour": "12pm",
+   "value": 2708255,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 1 May",
+   "hour": "3pm",
+   "value": 2694170,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 1 May",
+   "hour": "6pm",
+   "value": 2633641,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 1 May",
+   "hour": "9pm",
+   "value": 2497995,
+   "Percentage": "50%"
+ },
+ {
+   "week": "Wk 2 May",
+   "hour": "9am",
+   "value": 2649950,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 2 May",
+   "hour": "12pm",
+   "value": 2763317,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 2 May",
+   "hour": "3pm",
+   "value": 2758559,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 2 May",
+   "hour": "6pm",
+   "value": 2674551,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 2 May",
+   "hour": "9pm",
+   "value": 2487165,
+   "Percentage": "50%"
+ },
+ {
+   "week": "Wk 3 May",
+   "hour": "9am",
+   "value": 2633922,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 3 May",
+   "hour": "12pm",
+   "value": 2738577,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 3 May",
+   "hour": "3pm",
+   "value": 2719105,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 3 May",
+   "hour": "6pm",
+   "value": 2657600,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 3 May",
+   "hour": "9pm",
+   "value": 2442129,
+   "Percentage": "49%"
+ },
+ {
+   "week": "Wk 4 May",
+   "hour": "9am",
+   "value": 2597410,
+   "Percentage": "52%"
+ },
+ {
+   "week": "Wk 4 May",
+   "hour": "12pm",
+   "value": 2719698,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 4 May",
+   "hour": "3pm",
+   "value": 2675766,
+   "Percentage": "54%"
+ },
+ {
+   "week": "Wk 4 May",
+   "hour": "6pm",
+   "value": 2622442,
+   "Percentage": "53%"
+ },
+ {
+   "week": "Wk 4 May",
+   "hour": "9pm",
+   "value": 2436896,
+   "Percentage": "49%"
+ },
+ {
+   "week": "Wk 1 Jun",
+   "hour": "9am",
+   "value": 2766615,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 1 Jun",
+   "hour": "12pm",
+   "value": 2881111,
+   "Percentage": "58%"
+ },
+ {
+   "week": "Wk 1 Jun",
+   "hour": "3pm",
+   "value": 2865886,
+   "Percentage": "58%"
+ },
+ {
+   "week": "Wk 1 Jun",
+   "hour": "6pm",
+   "value": 2728067,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 1 Jun",
+   "hour": "9pm",
+   "value": 2392560,
+   "Percentage": "48%"
+ },
+ {
+   "week": "Wk 2 Jun",
+   "hour": "9am",
+   "value": 2774340,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 2 Jun",
+   "hour": "12pm",
+   "value": 2882657,
+   "Percentage": "58%"
+ },
+ {
+   "week": "Wk 2 Jun",
+   "hour": "3pm",
+   "value": 2882044,
+   "Percentage": "58%"
+ },
+ {
+   "week": "Wk 2 Jun",
+   "hour": "6pm",
+   "value": 2739965,
+   "Percentage": "55%"
+ },
+ {
+   "week": "Wk 2 Jun",
+   "hour": "9pm",
+   "value": 2377133,
+   "Percentage": "48%"
+ },
+ {
+   "week": "Wk 3 Jun",
+   "hour": "9am",
+   "value": 2796213,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 3 Jun",
+   "hour": "12pm",
+   "value": 2951731,
+   "Percentage": "60%"
+ },
+ {
+   "week": "Wk 3 Jun",
+   "hour": "3pm",
+   "value": 2922355,
+   "Percentage": "59%"
+ },
+ {
+   "week": "Wk 3 Jun",
+   "hour": "6pm",
+   "value": 2788579,
+   "Percentage": "56%"
+ },
+ {
+   "week": "Wk 3 Jun",
+   "hour": "9pm",
+   "value": 2415572,
+   "Percentage": "49%"
+ },
+ {
+   "week": "Wk 4 Jun",
+   "hour": "9am",
+   "value": 2812568,
+   "Percentage": "57%"
+ },
+ {
+   "week": "Wk 4 Jun",
+   "hour": "12pm",
+   "value": 3007456,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 4 Jun",
+   "hour": "3pm",
+   "value": 3006410,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 4 Jun",
+   "hour": "6pm",
+   "value": 2862901,
+   "Percentage": "58%"
+ },
+ {
+   "week": "Wk 4 Jun",
+   "hour": "9pm",
+   "value": 2480234,
+   "Percentage": "50%"
+ },
+ {
+   "week": "Wk 5 Jun",
+   "hour": "9am",
+   "value": 2843281,
+   "Percentage": "57%"
+ },
+ {
+   "week": "Wk 5 Jun",
+   "hour": "12pm",
+   "value": 3032558,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 5 Jun",
+   "hour": "3pm",
+   "value": 3030828,
+   "Percentage": "61%"
+ },
+ {
+   "week": "Wk 5 Jun",
+   "hour": "6pm",
+   "value": 2881295,
+   "Percentage": "58%"
+ },
+ {
+   "week": "Wk 5 Jun",
+   "hour": "9pm",
+   "value": 2490868,
+   "Percentage": "50%"
+ }
+]

@@ -28,8 +28,8 @@ async function printdata(month,date,time){
     console.log("total lots: " + totallots1 + " " + "ava lots: " +totalavalots)
 }
 
-let month = "06"
-let date = "30"
+let month = "07"
+let date = "04"
 let time = "09"
 
 printdata(month,date,time)

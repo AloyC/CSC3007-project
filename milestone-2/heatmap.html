@@ -121,40 +121,40 @@
         }]);
 
         //Label for duration of Circuit Breaker
+        chart.children.unshift(am5.Label.new(root, {
+          text: "Circuit Breaker from the Wk 1 Apr to Wk 4 May",
+          fontSize: 25,
+          fontWeight: "500",
+          textAlign: "Center",
+          x: am5.percent(50),
+          centerX: am5.percent(50),
+          paddingTop: 0,
+          paddingBottom: 12
+        }));
+
         // chart.children.unshift(am5.Label.new(root, {
-        //   text: "Circuit Breaker from the Wk 1 Apr to Wk 4 May",
-        //   fontSize: 25,
+        //   text: "Start of Circuit Breaker",
+        //   fontSize: 17,
         //   fontWeight: "500",
         //   textAlign: "Center",
         //   x: am5.percent(50),
         //   centerX: am5.percent(50),
         //   paddingTop: 0,
-        //   paddingBottom: 12
+        //   paddingBottom: 0,
+        //   paddingRight: 600
         // }));
 
-        chart.children.unshift(am5.Label.new(root, {
-          text: "Start of Circuit Breaker",
-          fontSize: 17,
-          fontWeight: "500",
-          textAlign: "Center",
-          x: am5.percent(50),
-          centerX: am5.percent(50),
-          paddingTop: 0,
-          paddingBottom: 0,
-          paddingRight: 600
-        }));
-
-        chart.children.unshift(am5.Label.new(root, {
-          text: "End of Circuit Breaker",
-          fontSize: 17,
-          fontWeight: "500",
-          textAlign: "Center",
-          x: am5.percent(50),
-          centerX: am5.percent(50),
-          paddingTop: 0,
-          paddingBottom: 0,
-          paddingLeft: 750
-        }));
+        // chart.children.unshift(am5.Label.new(root, {
+        //   text: "End of Circuit Breaker",
+        //   fontSize: 17,
+        //   fontWeight: "500",
+        //   textAlign: "Center",
+        //   x: am5.percent(50),
+        //   centerX: am5.percent(50),
+        //   paddingTop: 0,
+        //   paddingBottom: 0,
+        //   paddingLeft: 750
+        // }));
 
         // Add heat legend
         // https://www.amcharts.com/docs/v5/concepts/legend/heat-legend/
@@ -163,7 +163,8 @@
           startColor: am5.color(0x33DCFE),
           endColor: am5.color(0x00005F),
           startText: "High Lots Availability",
-          endText: "Low Lots Availability"
+          endText: "Low Lots Availability",
+          stepCount: 5
         }));
 
         // Set data

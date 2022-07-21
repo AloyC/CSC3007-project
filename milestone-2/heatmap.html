@@ -114,18 +114,56 @@
         // https://www.amcharts.com/docs/v5/concepts/settings/heat-rules/
         series.set("heatRules", [{
           target: series.columns.template,
-          max: am5.color(0xfffb77),
-          min: am5.color(0xfe131a),
+          max: am5.color(0x33DCFE),
+          min: am5.color(0x00005F),
           dataField: "value",
           key: "fill"
         }]);
+
+        //Label for duration of Circuit Breaker
+        // chart.children.unshift(am5.Label.new(root, {
+        //   text: "Circuit Breaker from the Wk 1 Apr to Wk 4 May",
+        //   fontSize: 25,
+        //   fontWeight: "500",
+        //   textAlign: "Center",
+        //   x: am5.percent(50),
+        //   centerX: am5.percent(50),
+        //   paddingTop: 0,
+        //   paddingBottom: 12
+        // }));
+
+        chart.children.unshift(am5.Label.new(root, {
+          text: "Start of Circuit Breaker",
+          fontSize: 17,
+          fontWeight: "500",
+          textAlign: "Center",
+          x: am5.percent(50),
+          centerX: am5.percent(50),
+          paddingTop: 0,
+          paddingBottom: 0,
+          paddingRight: 600
+        }));
+
+        chart.children.unshift(am5.Label.new(root, {
+          text: "End of Circuit Breaker",
+          fontSize: 17,
+          fontWeight: "500",
+          textAlign: "Center",
+          x: am5.percent(50),
+          centerX: am5.percent(50),
+          paddingTop: 0,
+          paddingBottom: 0,
+          paddingLeft: 750
+        }));
 
         // Add heat legend
         // https://www.amcharts.com/docs/v5/concepts/legend/heat-legend/
         var heatLegend = chart.bottomAxesContainer.children.push(am5.HeatLegend.new(root, {
           orientation: "horizontal",
-          startColor: am5.color(0xfffb77),
-          endColor: am5.color(0xfe131a)
+          startColor: am5.color(0x33DCFE),
+          endColor: am5.color(0x00005F),
+          startText: "High Lots Availability",
+          endText: "Low Lots Availability"
         }));
 
         // Set data
@@ -175,7 +213,7 @@
   </script>
 
   <!-- HTML -->
-  <h1>Singapore Carpark Lots Avaliablility During Circuit Breaker</H1>
+  <h1>Singapore Carpark Lots Availability During Circuit Breaker</H1>
   <div id="chartdiv"></div>
 
 </body>

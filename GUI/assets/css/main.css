@@ -3287,3 +3287,9 @@ section {
   background: var(--color-primary);
   text-decoration: none;
 }
+
+.tooltip {
+  position: absolute;
+   background: #fff;
+  /* padding: 10px; */
+}

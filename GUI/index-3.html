@@ -61,6 +61,30 @@
       font-size: 15px;
       
     }
+
+    table {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid
+    }
+
+    td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+      background-color:lightblue;
+    }
+
+    tr:nth-child(even) {
+      /* background-color: #dddddd; */
+    }
   </style>
 </head>
 
@@ -114,6 +138,7 @@
       </div>
     </div>
   </section>
+
   
   <main id="main">
     <!-- ======= About Visualization Section ======= -->
@@ -131,6 +156,7 @@
       </div>
     </section>
     <!-- End About Section -->
+
 
 
     <!-- ======= Improvement Section ======= -->
@@ -232,21 +258,13 @@
                       as a indication of road traffic. It is assumed that the higher the number of available lots, there is more traffic on the road. 
                       </p>
                     <ul>
-                      <!-- <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                    </ul>
-                    <p>
-                      Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit anim id est laborum
-                    </p> -->
                   </div>
                   <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
                     <img src="assets/img/heatmap-thumbnail.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div><!-- End Tab Content 1 -->
+
     
               <div class="tab-pane" id="tab-2">
                 <div class="row gy-4">
@@ -263,10 +281,8 @@
                       <a href="https://data.gov.sg/dataset/carpark-availability">Carpark Availability API</a> from Data.gov.sg developer resources. 
           
                     </p>
-                    <!-- <p class="fst-italic">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua.
-                    </p> -->
+
+                    
                     <ul>
                       <li><i class="bi bi-check-circle-fill"></i> Queried the API for dates and time in range</li>
                       <li><i class="bi bi-check-circle-fill"></i> Cleaned the data from API and only kept useful information</li>
@@ -383,6 +399,51 @@
     
           </div>
         </section><!-- End Features Section -->
+
+
+        <!-- ======= About Visualization Section ======= -->
+        <section id="aboutviz" class="aboutviz">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-header">
+              <h2>Work Contribution</h2>
+
+              <table>
+                <tr>
+                  <th>Members</th>
+                  <th>Student ID</th>
+                  <th>Contribution</th>
+                </tr>
+                <tr>
+                  <td>Angela Lui An Chi</td>
+                  <td>input student id</td>
+                  <td>
+                    <li>Data Cleaning</li>
+                    <li>Code</li>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Aloysius Chia Mu Rong</td>
+                  <td>input student id</td>
+                  <td>
+                    <li>Data Cleaning</li>
+                    <li>Code</li>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Khloe Lim Xin Hui</td>
+                  <td>1901865</td>
+                  <td>
+                    <li>Data Cleaning</li>
+                    <li>Code</li>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+          </div>
+        </section>
+        <!-- End About Section -->
 
 
   </main><!-- End #main -->

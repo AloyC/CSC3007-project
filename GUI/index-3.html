@@ -89,7 +89,7 @@
 
           <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="index.html" class="active">Home 1 - index.html</a></li>
+              <li><a href="index.html" class="active">Home </a></li>
               <li><a href="index-2.html">Milestone 1</a></li>
               <li><a href="index-3.html">Milestone 2</a></li>
             </ul>
@@ -109,15 +109,11 @@
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
       data-aos="zoom-out">
       <div>
-
+        <h2 style="align-items:center;"><span>Milestone 2</span></h2><br>
       <!-- Main graph display -->
       <h1>Singapore Carpark Lots Availability During Circuit Breaker</H1>
       <h3>Circuit Breaker from: 01 Apr 19 - 30 May 2019</h3>
       <div id="my_dataviz" style="align-self: center;"></div>
-
-      <h2><span>2</span></h2>
-      <p>Group members: Aloysius, Angela, Khloe</p>
-
       </div>
     </div>
   </section>
@@ -239,24 +235,23 @@
   </script>
   
 
-
-
   <main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
-        <div id="my_dataviz" style="align-self: center;"></div>
-
 
         <div class="section-header">
-          <h2>About Us</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas
-            asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <h2>About the Visualization</h2>
+          <p>This Visualization is an improved version of the <a href="https://ual.sg/post/2020/04/12/singapores-urban-data-affirms-the-compliance-with-the-circuit-breaker-measures/">visualization</a> we have critiqued in Milestone 1. The visualization we had 
+          chosen to do is a Heatmap using the D3 library, to enable users to visualize the availability of HDB carparks lots for cars during the period from April 2019 to July 2019.
+          This visualization is used to show the effect that the Covid-19 Pandemic had to Singapore Roads and how it affected traffic. 
+          </p>
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section>
+      <!-- End About Section -->
 
 
     <!-- ======= Portfolio Section ======= -->
@@ -264,9 +259,17 @@
       <div class="container">
 
         <div class="section-header">
-          <h2>Portfolio</h2>
-          <p>Non hic nulla eum consequatur maxime ut vero memo vero totam officiis pariatur eos dolorum sed fug dolorem
-            est possimus esse quae repudiandae. Dolorem id enim officiis sunt deserunt esse soluta consequatur quaerat
+          <h2>Data</h2>
+          <p>As explained from Milestone 1, there is no publicly available dataset on Road Traffic in Singapore, such as the number of cars on the Road. 
+            Singapore Land Transport Authority (LTA) provides a dataset to view real time travel times across Singapore, and may suggest the number of cars 
+            on the road. However, the API does not allow for querying for historical data, therefore we are unable to retrieve past trends. <br><br>
+            Therefore, we have followed the same dataset that was used in Milestone 1. In the absence of better data, carpark availability was used, 
+            as a reasonable substitute to measure movement of people by car, since it makes movement suggestions that are reasonably accurate in order to 
+            obtain a clear picture of movements by car. To focus on the residential aspect, only HDB carparks were considered.
+            
+            Since the API only allows for calls for a specific date and time, we had to conduct data cleaning using the data pulled from the 
+            <a href="https://data.gov.sg/dataset/carpark-availability">Carpark Availability API</a> from Data.gov.sg developer resources. 
+
           </p>
         </div>
 

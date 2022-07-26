@@ -3288,7 +3288,7 @@ section {
   text-decoration: none;
 }
 
-.tooltip {
+.tooltips {
   position: absolute;
    background: #fff;
   /* padding: 10px; */

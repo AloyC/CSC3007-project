@@ -67,12 +67,6 @@ h6 {
   animation-delay: -0.5s;
 }
 
-div.my_dataviz {
-  align-items: center;
-  height:300px;
-  width: 500px;
-}
-
 @-webkit-keyframes animate-preloader {
   0% {
     width: 10px;
@@ -3290,10 +3284,4 @@ section {
 .footer .footer-legal .social-links a:hover {
   background: var(--color-primary);
   text-decoration: none;
-}
-
-.tooltips {
-  position: absolute;
-   background: #fff;
-  /* padding: 10px; */
 }

@@ -16,7 +16,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,80 +60,70 @@
       </a>
 
       <nav id="navbar" class="navbar">
+        <ul>
 
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="index.html">Home </a></li>
+              <li><a href="index-2.html">Milestone 1</a></li>
+              <li><a href="index-3.html">Milestone 2</a></li>
+            </ul>
+          </li>
+
           <li><a class="nav-link scrollto" href="index-2.html">Milestone 1</a></li>
           <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
 
 
-        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+          <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
-    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/2472283.png" class="img-fluid animated">
-      <h2>CSC3007 <span>Information Visualization</span></h2>
-      <p>Group members: Aloysius, Angela, Khloe</p>
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Milestone 1</a>
-        <!-- <a href="#about" class="btn-get-started scrollto">Milestone 2</a> -->
-        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+      data-aos="zoom-out">
+      <div>
+        <h2 style="align-items:center;"><span>Milestone 1</span></h2><br>
+        <!-- Main graph display -->
+        <h1>Critique/Validations of Visualizations</h1>
+        <h3>Visualization Chart 1</h3>
       </div>
+      <img src="./assets/img/Chart-1.png" class="center" style="width:70%;">
     </div>
   </section>
 
   <main id="main">
-
-
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= About Visualization Chart 1 ======= -->
+    <section id="vizchart1" class="vizchart1">
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
-          <h2>About Us</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <h2>Background</h2>
+          <p>The <a
+              href="https://ual.sg/post/2020/04/12/singapores-urban-data-affirms-the-compliance-with-the-circuit-breaker-measures/">visualization
+              chart</a> above includes a longer longitudinal daily trend since early December, before the COVID-19
+            pandemic started, illustrating
+            the traffic until now and covering some key events in the timeline as the events unfolded.
+          </p>
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End About Visualization Chart 1 Section -->
 
-   
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio" data-aos="fade-up">
-
+    <!-- ======= Data Section ======= -->
+    <section id="data1" class="data1" data-aos="fade-up">
       <div class="container">
-
         <div class="section-header">
-          <h2>Portfolio</h2>
-          <p>Non hic nulla eum consequatur maxime ut vero memo vero totam officiis pariatur eos dolorum sed fug dolorem est possimus esse quae repudiandae. Dolorem id enim officiis sunt deserunt esse soluta consequatur quaerat</p>
+          <h2>Data</h2>
+          <ul>
+            <li>No clear direction on the axis parameters with x-axis label showing by months (Dec-Apr) while y-axis label showing by week (Mon-Sun). Although there is found to have arrow indications highlighting those special events happening during Circuit Breaker, but it did not state which year does it occurred.
+              Therefore, viewers are not be able to comprehend the information immediately by looking at the chart.
+              </li>
+            <li>The dataset used to present data on the chart do not correspond to the chart title. In fact, it depicts the HDB carpark lots availability instead of the traffic intensity on the Singapore’s road. </li>
+          </ul>
         </div>
-
       </div>
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
-
-          <ul class="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-
+    </section> <!-- End Data Section -->
 
   </main><!-- End #main -->
 
@@ -139,27 +131,20 @@
   <footer id="footer" class="footer">
 
     <div class="footer-legal text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>HeroBiz</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            &copy; Copyright <strong><span>Team 03</span></strong>. All Rights Reserved
           </div>
         </div>
-
       </div>
-    </div>
 
   </footer><!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 

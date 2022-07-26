@@ -70,9 +70,15 @@
             </ul>
           </li>
 
-          <li><a class="nav-link scrollto" href="index-2.html">Milestone 1</a></li>
-          <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
+          <li class="dropdown"><a href="#"><span>Milestone 1</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="index-2.html">Visualization Chart 1</a></li>
+              <li><a href="index-2-1.html">Visualization Chart 2</a></li>
+            </ul>
+          </li>
 
+          <!-- <li><a class="nav-link scrollto" href="index-2.html">Milestone 1</a></li> -->
+          <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
 
           <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -89,7 +95,7 @@
         <h1>Critique/Validations of Visualizations</h1>
         <h3>Visualization Chart 1</h3>
       </div>
-      <img src="./assets/img/Chart-1.png" class="center" style="width:70%;">
+      <img src="./assets/img/Chart-1.png" class="center" style="width:65%;">
     </div>
   </section>
 
@@ -110,20 +116,59 @@
       </div>
     </section><!-- End About Visualization Chart 1 Section -->
 
-    <!-- ======= Data Section ======= -->
-    <section id="data1" class="data1" data-aos="fade-up">
+    <!-- ======= Data & Idiom Section ======= -->
+    <section id="data-idiom" class="data-idiom" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
-          <h2>Data</h2>
-          <ul>
-            <li>No clear direction on the axis parameters with x-axis label showing by months (Dec-Apr) while y-axis label showing by week (Mon-Sun). Although there is found to have arrow indications highlighting those special events happening during Circuit Breaker, but it did not state which year does it occurred.
-              Therefore, viewers are not be able to comprehend the information immediately by looking at the chart.
-              </li>
-            <li>The dataset used to present data on the chart do not correspond to the chart title. In fact, it depicts the HDB carpark lots availability instead of the traffic intensity on the Singapore’s road. </li>
-          </ul>
+          <h2>Critique</h2>
+          <h3>Data</h3>
+          <p>No clear direction on the axis parameters with x-axis label showing by months (Dec-Apr) while y-axis label
+            showing by week (Mon-Sun).
+            Although there is found to have arrow indications highlighting those special events happening during Circuit
+            Breaker, <br>but it did not state which year does it occurred.
+            <br><br>Therefore, viewers are not be able to comprehend the information immediately by looking at the
+            chart. The dataset used to present data on the chart do not correspond to the chart title.
+            In fact, it depicts the HDB carpark lots availability instead of the traffic intensity on the Singapore’s
+            road.
+          </p><br>
+          <div class="container">
+            <div class="section-header">
+              <h3>Idiom</h3>
+              <p>The idiom used in this visualization chart is a heat map that displays magnitude of a phenomenon as
+                color
+                in 2D dimensions but the y-axis label was located right below the chart title.
+                Unexpectedly, the layout of the chart may give the viewers a misleading direction or impression that
+                they
+                are viewing a calendar.
+                <br><br>The colours utilized are very confusing. The darker and intense colours signifies lesser traffic
+                while yellow and green is used to signify a higher traffic.
+                In User Interface (UI) design, this should be done in reverse.
+              </p>
+            </div>
+          </div>
+    </section> <!-- End Data & Idiom Section -->
+
+    <!-- ======= Improvement Section ======= -->
+    <section id="improvement" class="improvement" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Improvement Made</h2>
+          <img src="./assets/img/ImprovisedChart-1.jpeg" class="center" style="width:70%;">
+          <p><br>Firstly, transform the existing chart type into a line chart, which may be used to show patterns in
+            traffic flow on
+            Singapore's roads over the epidemic period. Subsequently, in order to provide viewers with more accurate
+            representations, the correct dataset should be utilized
+            instead of the existing one. On top of that, it will be nice to have an organized short description as its
+            legend to be positioned besides the improvised chart. <br><br> The x-axis label should start from the
+            baseline of the chart in the format of MM-YYYY (e.g., Dec 2019) to
+            give a clearer indication. Also, the y-axis label will be renamed to “Total HDB Carpark Lots Available (%)”
+            so that the data shown is correctly reflected. The various shades of green used to indicate the daily
+            maximum car movement should be readjusted, as light
+            color generally denotes low value and dark color denotes high value.
+          </p>
         </div>
       </div>
-    </section> <!-- End Data Section -->
+    </section> <!-- End Improvement Section -->
 
   </main><!-- End #main -->
 

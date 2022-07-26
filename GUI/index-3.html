@@ -47,13 +47,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
   <!-- <script src="bootstrap/js/bootstrap-tooltip.js"></script> -->
 
-  <!-- =======================================================
-  * Template Name: HeroBiz - v2.2.0
-  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
   <style>
     .tooltip {
       margin-left: 60px;
@@ -69,7 +62,6 @@
       
     }
   </style>
-
 </head>
 
 <body>
@@ -94,9 +86,15 @@
             </ul>
           </li>
 
-          <li><a class="nav-link scrollto" href="index-2.html">Milestone 1</a></li>
-          <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
+          <li class="dropdown"><a href="#"><span>Milestone 1</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="index-2.html">Visualization Chart 1</a></li>
+              <li><a href="index-2-1.html">Visualization Chart 2</a></li>
+            </ul>
+          </li>
 
+          <!-- <li><a class="nav-link scrollto" href="index-2.html">Milestone 1</a></li> -->
+          <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
 
           <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -128,19 +126,26 @@
           we have critiqued in Milestone 1. The visualization we have chosen to do is a Heatmap using the D3 library, to enable users to visualize the availability of HDB carparks lots for cars during 
           the period from April 2019 to July 2019. This visualization is used to show the effect that the Covid-19 Pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots availability 
           as a indication of road traffic. It is assumed that the higer the value of available lots, there is more traffic on the road. 
-          </p><br>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
 
-          <h2>Improvements made</h2> 
+
+    <!-- ======= Improvement Section ======= -->
+    <section id="improvement" class="improvement" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Improvement Made</h2>
           <p>In the initial visualization, it was static and did not allow for any interaction. We have added interaction into the visualization by adding a tooltip and mouseover functionalities. 
             Previously, we were unable to understand the data shown from the visualization, therefore we have decided to compile the data and make it visible for the users, so that they can better understand
             the trends or patterns in the visualization. To add on, we have also changed the color scale that was previously misleading. A darker/more intense shade of blue is used to denote higher occupancy 
             in the day, at a specific timing. 
           </p>
         </div>
-
       </div>
-    </section>
-    <!-- End About Section -->
+    </section> <!-- End Improvement Section -->
 
 
     <!-- ======= Data Section ======= -->
@@ -148,7 +153,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Data</h2>
-          <p>As explained from Milestone 1, there is no publicly available dataset on Road Traffic in Singapore, such as the number of cars on the Road. 
+          <p>As explained from Milestone 1, there is no publicly available dataset on Road Traffic in Singapore, such as the number of cars on the road. 
             Singapore Land Transport Authority (LTA) provides a dataset to view real time travel times across Singapore, and may suggest the number of cars 
             on the road. However, the API does not allow for querying for historical data, therefore we are unable to retrieve past trends. <br><br>
             Therefore, we have followed the same dataset that was used in Milestone 1. In the absence of better data, carpark availability was used, 
@@ -160,7 +165,7 @@
           </p>
         </div>
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- End Data Section -->
 
         <!-- ======= Features Section ======= -->
         <section id="features" class="features">
@@ -223,7 +228,7 @@
                     </p>
                     <p>This Visualization is an improved version of the <a href="https://ual.sg/post/2020/04/12/singapores-urban-data-affirms-the-compliance-with-the-circuit-breaker-measures/">visualization</a> 
                       we have critiqued in <a href="index-2.html">Milestone 1</a>. The visualization we have chosen to do is a Heatmap using the D3 library, to enable users to visualize the availability of HDB carparks lots for cars during 
-                      the period from April 2019 to July 2019. This visualization is used to show the effect that the Covid-19 Pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots availability 
+                      the period from April 2020 to July 2020. This visualization is used to show the effect that the COVID-19 Pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots availability 
                       as a indication of road traffic. It is assumed that the higher the number of available lots, there is more traffic on the road. 
                       </p>
                     <ul>

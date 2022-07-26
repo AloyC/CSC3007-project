@@ -16,7 +16,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -78,28 +80,71 @@
   </header><!-- End Header -->
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
-    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/2472283.png" class="img-fluid animated">
-      <h2>CSC3007 <span>Information Visualization</span></h2>
-      <h3>Team 03</h3>
-      <div class="d-flex">
-        <a href="index-2.html" class="btn-get-started scrollto">Milestone 1</a>
-        <a href="index-3.html" class="btn-get-started scrollto">Milestone 2</a>
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+      data-aos="zoom-out">
+      <div>
+        <h2 style="align-items:center;"><span>Milestone 1</span></h2><br>
+        <!-- Main graph display -->
+        <h1>Critique/Validations of Visualizations</h1>
+        <h3>Visualization Chart 2</h3>
       </div>
+      <img src="./assets/img/Chart-2.jpg" class="center" style="width:65%;">
     </div>
   </section>
 
   <main id="main">
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= About Visualization Chart 2 ======= -->
+    <section id="vizchart2" class="vizchart2">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>About Us</h2>
-          <p>The team consists of three (3) members: Aloysius, Angela, and Khloe. In this module, we were tasked to design and implement a moderately complex visualization within the project team.</p>
+          <h2>Background</h2>
+          <p>The <a
+            href="https://www.finfacts-blog.com/2021/01/optimism-vs-pessimism-youve-never-had.html">visualization
+            chart</a> above was extracted from the Bank of America which illustrates the Global output (measured in gross domestic product, GDP) from the beginning of the
+            common era (1600) of the Ancient super-civilizations.
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End About Visualization Chart 2 Section -->
+
+    <!-- ======= Data & Idiom Section ======= -->
+    <section id="data-idiom" class="data-idiom" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Critique</h2>
+          <h3>Data</h3>
+          <p>Data represented in the chart is messy as it has a huge jump from the starting point to its first year as shown on the x-axis label (e.g., 1 to 1600, 1600 to 1913). 
+            The spacing increments on the x-axis varies because of missing data.
+            Data shown is also sloppy as there are many overlapping data to show on which country has progress the most over the years.            
+          </p><br>
+          <div class="container">
+            <div class="section-header">
+              <h3>Idiom</h3>
+              <p>The idiom used in this visualization chart is a 100% stacked area chart. Considering the chart is an non-intuitive presentation, it may be unfamiliar to many.
+                It is at this point that the misconception arises that values overlap, implying that they all begin at 0. The truth is that each series representation begins where the previous one ends.<br><br>
+                Overuse of different colors makes it difficult to distinguish one from another, resulting in viewers having a hard time to see the region encompassed by each of the countries.
+                Because of what was mentioned above, it also affects the chart for being able to demonstrate the trends over time. The range of values on the x-axis (e.g., years) is inconsistent with no equal interval between start and end year.                     
+              <p>
+              </p>
+            </div>
+          </div>
+    </section> <!-- End Data & Idiom Section -->
+
+    <!-- ======= Improvement Section ======= -->
+    <section id="improvement" class="improvement" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Improvement Made</h2>
+          <img src="./assets/img/ImprovisedChart-2.jpeg" class="center" style="width:70%;">
+          <p><br>The idiom used in the improvised visualization chart will be turned into a line chart so that the values can be depicted easily. 
+            Originally, x-axis label represent the years but it would be readjusted and y-axis label would remain unchanged. 
+            <br><br>The only difference was that now there will be an indication labels on both the x and y-axis to reduce viewers confusion about the chart. 
+            Suggested to have mouse over so there would be easily show the data and percentage of each year clearer.            
+          </p>
         </div>
       </div>
-    </section><!-- End About Us Section -->
+    </section> <!-- End Improvement Section -->
 
   </main><!-- End #main -->
 
@@ -107,18 +152,20 @@
   <footer id="footer" class="footer">
 
     <div class="footer-legal text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
             &copy; Copyright <strong><span>Team 03</span></strong>. All Rights Reserved
           </div>
+        </div>
       </div>
-    </div>
 
   </footer><!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 

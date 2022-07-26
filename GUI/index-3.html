@@ -77,7 +77,6 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
@@ -89,7 +88,7 @@
 
           <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="index.html" class="active">Home </a></li>
+              <li><a href="index.html">Home </a></li>
               <li><a href="index-2.html">Milestone 1</a></li>
               <li><a href="index-3.html">Milestone 2</a></li>
             </ul>
@@ -112,7 +111,7 @@
         <h2 style="align-items:center;"><span>Milestone 2</span></h2><br>
       <!-- Main graph display -->
       <h1>Singapore Carpark Lots Availability During Circuit Breaker</H1>
-      <h3>Circuit Breaker from: 01 Apr 19 - 30 May 2019</h3>
+      <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
       <div id="my_dataviz" style="align-self: center;"></div>
       </div>
     </div>
@@ -135,7 +134,7 @@
           .append("g")
           .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-      //Read the data
+      // Read the data
       d3.csv("../milestone-2/D3 Heatmap/ParkingData.csv").then(function (data) {
 
           // Labels of row and columns -> unique identifier of the column called 'week' and 'hour'
@@ -236,7 +235,6 @@
   
 
   <main id="main">
-
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -254,7 +252,7 @@
       <!-- End About Section -->
 
 
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Data Section ======= -->
     <section id="portfolio" class="portfolio" data-aos="fade-up">
       <div class="container">
 
@@ -275,50 +273,17 @@
 
       </div>
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
-          data-portfolio-sort="original-order">
-
-          <ul class="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-        </div><!-- End Portfolio Container -->
-
-      </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-
     <div class="footer-legal text-center">
       <div
         class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>HeroBiz</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Team 03</span></strong>. All Rights Reserved
           </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-
       </div>
     </div>
 

@@ -17,6 +17,7 @@
             text-align: center;
             text-transform: uppercase;
         }
+
         .tooltip {
             margin-left: 60px;
             margin-right: 60px;
@@ -30,18 +31,19 @@
 
     <!-- Loading d3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script>
 
-        // set the dimensions and margins of the graph
+        // Set the dimensions and margins of the graph
         const margin = { top: 0, right: 25, bottom: 30, left: 60 },
             width = 1750 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
 
-        // append the svg object to the body of the page
+        // Append the svg object to the body of the page
         const svg = d3.select("#my_dataviz")
             .append("svg")
             .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("height", height + margin.top + margin.bottom + 100)
             .append("g")
             .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -75,15 +77,21 @@
                 .select(".domain").remove()
 
             // Build color scale
-            // const myColor = d3.scaleThreshold()
-            //     .range(d3.schemeBlues[9])
-            //     .domain([1300000, 1500000, 1700000, 2000000, 2300000, 2500000, 2700000, 3000000, 3200000])
-
             const myColor = d3.scaleLinear()
                 .range(["navyblue", "blue", "skyblue"])
                 .domain([1500000, 2500000, 3000000])
 
-            // create a tooltip
+            // Set the legend for the colorscale
+            var legend = d3
+                .legendColor()
+                .scale(myColor)
+                .shapeWidth(325)
+                .labels(function (d) { return myColor(d.generatedLabels); })
+                .orient("horizontal");
+
+            svg.append("g").attr("transform", "translate(20,480)").call(legend);
+
+            // Create a tooltip
             const tooltip = d3.select("#my_dataviz")
                 .append("div")
                 .style("opacity", 0)
@@ -94,32 +102,11 @@
                 .style("border-radius", "5px")
                 .style("padding", "5px")
 
-            // Three function that change the tooltip when user hover / move / leave a cell
-            const mouseover = function (event, d) {
-                tooltip
-                    .style("opacity", 1)
-                d3.select(this)
-                    .style("stroke", "black")
-                    .style("opacity", 1)
-            }
-            const mousemove = function (event, d) {
-                tooltip
-                    .html("Total Avaliable Lots: " + d.value + "<br>Percentage of Avaliable Lots: " + d.Percentage)
-                    .style("left", (event.x) / 2 + "px")
-                    .style("top", (event.y) / 2 + "px")
-            }
-            const mouseleave = function (event, d) {
-                tooltip
-                    .style("opacity", 0)
-                d3.select(this)
-                    .style("stroke", "none")
-                    .style("opacity", 0.8)
-            }
-
-            // add the squares
+            // Add the squares
             svg.selectAll()
                 .data(data, function (d) { return d.week + ':' + d.hour; })
-                .join("rect")
+                .enter()
+                .append("rect")
                 .attr("x", function (d) { return x(d.week) })
                 .attr("y", function (d) { return y(d.hour) })
                 .attr("rx", 4)
@@ -130,9 +117,31 @@
                 .style("stroke-width", 4)
                 .style("stroke", "none")
                 .style("opacity", 0.8)
-                .on("mouseover", mouseover)
-                .on("mousemove", mousemove)
-                .on("mouseleave", mouseleave)
+                .on("mouseover", (event, d) => {
+                    d3.select(".tooltip")
+                        .style("opacity", 2)
+                        .style("position", "absolute")
+                        .style("background", "#fff")
+                        .html("Total Available Lots: " + d.value + "<br>Percentage of Available Lots: " + d.Percentage)
+                        .style("left", (event.x) / 2 + "px")
+                        .style("top", (event.y) / 2 + "px");
+
+                    d3.select(event.currentTarget)
+                        .style("stroke", "black")
+                        .style("stroke-width", 2)
+                        .style("opacity", 2)
+                        .classed("selected", true);
+                })
+
+                .on("mouseout", (event, d) => {
+                    d3.select(".tooltip")
+                        .style("opacity", 0);
+
+                    d3.select(event.currentTarget)
+                        .style("stroke", "none")
+                        .style("opacity", 0.8)
+                        .classed("selected", false);
+                })
         })
 
     </script>

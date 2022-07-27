@@ -344,27 +344,36 @@
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1">
                 <h3>What Why How</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
+                <h4>How</h4>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
+                  The visualization is a Heatmap using the D3 library, to enable users to visualize 
+                  the availability of HDB carparks lots for cars during the period from April 2020 to July 2020. By 
+                  using the amomunt of occupancy in the carparks, the heatmap would show a darking color with a higher number of occupancy 
+                  and a lower lighter color with a lower number of occupancy. With a tooltip that would also show the total number of available lots,
+                  percentage of available lots and the percentage of occupied lots.
+                </p>
+                <h4>What</h4>
+                <p class="fst-italic">
+                  We have used HDB car lots availability as a indication of road traffic. It is assumed that the higer the value of available lots, there is
+                  more traffic on the road.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  <li><i class="bi bi-check-circle-fill"></i> Total number of HDB parking lots in each individual HDB
+                    parking</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Total number of occupied lots in individual HDB parking
                   </li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat
-                    nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Type of lots at each individual carpark and their carpark
+                    code></li>
+                  <li><i class="bi bi-check-circle-fill"></i> Specific Date and Time</li>
                 </ul>
+                <h4>Why</h4>
+                <p class="fst-italic">
+                  This visualization is done as an explanatory purpose to show the effect that the COVID-19
+                  Pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots availability
+                  as a indication of road traffic. It is assumed that the higer the value of available lots, there is
+                  more traffic on the road. We also used a tooltip to show a more indepth each square's value and percentage of the total available
+                  and occupied lots in Singapore.
+                </p>
               </div>
               <div class="col-lg-4 order-1 order-lg-2 text-center">
                 <img src="assets/img/why-how-what.jpg" alt="" class="img-fluid">
@@ -378,13 +387,15 @@
                 <h3>Challenges Faced</h3>
                 <p>
                   Throughout the entire process of implementing the improved version of the <a
-                  href="https://ual.sg/post/2020/04/12/singapores-urban-data-affirms-the-compliance-with-the-circuit-breaker-measures/">visualization</a> 
-                  that was previously critiqued in <a href="index-2.html">Milestone 1</a>, there were some of the challenges faced by the team and they are as follows:
+                    href="https://ual.sg/post/2020/04/12/singapores-urban-data-affirms-the-compliance-with-the-circuit-breaker-measures/">visualization</a>
+                  that was previously critiqued in <a href="index-2.html">Milestone 1</a>, there were some of the
+                  challenges faced by the team and they are as follows:
                 </p>
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i>Working with the Real-Time API Data</li>
                   <li><i class="bi bi-check-circle-fill"></i>Cleaning and sorting the retrieved API data </li>
-                  <li><i class="bi bi-check-circle-fill"></i>Rethinking the process of how to enable users to understand the story that
+                  <li><i class="bi bi-check-circle-fill"></i>Rethinking the process of how to enable users to understand
+                    the story that
                     we want to convey through the visualization</li>
                 </ul>
               </div>
@@ -451,7 +462,7 @@
               <td>Data Cleaning<br>
                 Code<br>
                 Documentation
-            </td>
+              </td>
             </tr>
             <tr>
               <td>Angela Lui An Chi</td>
@@ -459,7 +470,7 @@
               <td>Data Cleaning<br>
                 Code<br>
                 Documentation
-            </td>
+              </td>
             </tr>
             <tr>
               <td>Khloe Lim Xin Hui</td>
@@ -467,7 +478,7 @@
               <td>Data Cleaning<br>
                 Code<br>
                 Documentation
-            </td>
+              </td>
             </tr>
           </table>
         </div>
@@ -585,7 +596,7 @@
         .style("border-width", "2px")
         .style("border-radius", "5px")
         .style("padding", "5px")
-        // .style('transform', `translate(` + `calc( -50% + ${x}px),` + `calc(-50% + ${y}px)` + `)`);
+      // .style('transform', `translate(` + `calc( -50% + ${x}px),` + `calc(-50% + ${y}px)` + `)`);
 
       // Add the squares
       svg.selectAll()
@@ -607,9 +618,10 @@
             .style("opacity", 2)
             .style("position", "absolute")
             .style("background", "#fff")
-            .html("<b>Total Available Lots: </b>" + d.value + '<br>' + "<b>Percentage of Available Lots: </b>" + d.Percentage)
-            .style("left", (event.x-95) + "px")
-            .style("top", (event.y-105) + "px");
+            .html("<b>Total Available Lots: </b>" + d.value + '<br>' + "<b>Percentage of Available Lots: </b>" + d.Percentage
+            + '<br>' + "<b>Percentage of Occupied Lots: </b>" + d.occupied)
+            .style("left", (event.x - 95) + "px")
+            .style("top", (event.y - 105) + "px");
 
           d3.select(event.currentTarget)
             .style("stroke", "black")

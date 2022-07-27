@@ -22,4 +22,4 @@ This project is broken into two milestones:
   * Please refer to this set of [presentation deck](https://docs.google.com/presentation/d/1MfrH9M0evgnUsW4QM6q2Z-51f7oTXf3N1CHPAF27JfI/edit?usp=sharing) for submission of Milestone 1.
   * Alternatively, the PDF version of the presentation deck can found [here](https://github.com/AloyC/CSC3007-project/blob/main/milestone-1/CSC3007-P2-3-milestone1.pdf).
 * Milestone 2
-  * Still in-progress.
+  * Please refer to this [website](https://aloyc.github.io/CSC3007-project/GUI/index.html) for submission of Milestone 2.

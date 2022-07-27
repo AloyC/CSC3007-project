@@ -515,7 +515,7 @@
   <script>
 
     // Set the dimensions and margins of the graph
-    const margin = { top: 25, right: 25, bottom: -10, left: 60 },
+    const margin = { top: 25, right: -100, bottom: -10, left: 60 },
       width = 1750 - margin.left - margin.right,
       height = 450 - margin.top - margin.bottom;
 
@@ -565,7 +565,7 @@
       var legend = d3.legendColor()
         .cells(3)
         .scale(myColor)
-        .shapeWidth(545)
+        .shapeWidth(585)
         .labels(["High Lot Occupancy", "", "Low Lot Occupancy"])
         .title("Total Available Lots in Singapore: 4,958,636")
         .orient("horizontal");

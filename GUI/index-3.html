@@ -526,18 +526,22 @@
 
         // Build color scale
         const myColor = d3.scaleLinear()
-            .range(["navyblue", "blue", "skyblue"])
-            .domain([1500000, 2500000, 3000000])
+            .range(["indigo", "blue", "skyblue"])
+            .domain([2000000, 2500000, 3000000])
 
-        // Set the legend for the colorscale
-        var legend = d3
-            .legendColor()
+      // Set the legend for the colorscale
+        var legend = d3.legendColor()
+            .cells(3)
             .scale(myColor)
-            .shapeWidth(325)
-            .labels(function (d) { return myColor(d.generatedLabels); })
+            .shapeWidth(545)
+            .labels(["High lot occupancy", "", "Low Lot Occupancy"])
+            .title("Total Available Lots in Singapore: 4,958,636")
             .orient("horizontal");
 
-        svg.append("g").attr("transform", "translate(20,480)").call(legend);
+        svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", "translate(20,480)")
+            .call(legend);
 
         // Create a tooltip
         const tooltip = d3.select("#my_dataviz")

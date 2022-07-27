@@ -526,7 +526,7 @@
   <script>
 
     // Set the dimensions and margins of the graph
-    const margin = { top: 0, right: 25, bottom: 30, left: 60 },
+    const margin = { top: 25, right: 25, bottom: -10, left: 60 },
       width = 1750 - margin.left - margin.right,
       height = 450 - margin.top - margin.bottom;
 
@@ -553,14 +553,14 @@
         .padding(0.05);
       svg.append("g")
         .style("font-size", 15)
-        .attr("transform", `translate(0, ${height})`)
-        .call(d3.axisBottom(x).tickSize(0))
+        .attr("transform", `translate(0, 1)`)
+        .call(d3.axisTop(x).tickSize(0))
         .select(".domain").remove()
 
 
       // Build Y scales and axis:
       const y = d3.scaleBand()
-        .range([height, 0])
+        .range([0, height])
         .domain(myVars)
         .padding(0.05);
       svg.append("g")

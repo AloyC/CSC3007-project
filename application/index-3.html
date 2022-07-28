@@ -471,7 +471,7 @@
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
     //Read the data
-    d3.csv("./ParkingData.csv").then(function (data) {
+    d3.csv("./parking_data.csv").then(function (data) {
 
       // Labels of row and columns -> unique identifier of the column called 'week' and 'hour'
       const myGroups = Array.from(new Set(data.map(d => d.week)))

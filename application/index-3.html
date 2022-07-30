@@ -96,13 +96,7 @@
               <li><a href="index-2-1.html">Visualization Chart 2</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Milestone 2</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="index-3.html">Visualization Chart 1</a></li>
-              <li><a href="index-3-1.html">Visualization Chart 2</a></li>
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
           <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
 
@@ -118,10 +112,13 @@
         <h1>Singapore Carpark Lots Availability During the Pandemic</H1>
         <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
         <div id="my_dataviz" style="align-self: center;"></div>
+        <br>
+        <h1>Singapore Flights and Hotels Search During the Pandemic</H1>
+        <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
+        <div id="my_linechart" style="align-self: center;"></div>
       </div>
     </div>
   </section>
-
 
   <main id="main">
     <!-- ======= Background Section ======= -->
@@ -479,7 +476,7 @@
 
   <script>
 
-    // Set the dimensions and margins of the graph
+    // Set the dimensions and margins of the heatmap graph
     const margin = { top: 25, right: -100, bottom: -10, left: 60 },
       width = 1750 - margin.left - margin.right,
       height = 450 - margin.top - margin.bottom;
@@ -595,6 +592,84 @@
         })
     })
 
+    //Margins for the line chart
+    const marginline = { top: 10, right: 30, bottom: -350, left: 60 },
+      widthline = 1250 - margin.left - margin.right,
+      heighline = 930 - margin.top - margin.bottom;
+
+    // Append the svg object to the body of the page
+    const svgline = d3.select("#my_linechart")
+      .append("svg")
+      .attr("width", widthline + marginline.left + marginline.right)
+      .attr("height", heighline + marginline.top + marginline.bottom)
+      .append("g")
+      .attr("transform", `translate(${marginline.left},${marginline.top})`);
+
+    d3.csv("./google-trends.csv").then(function (data) {
+
+      // parse the date / time
+      var parseTime = d3.timeParse("%Y-%m-%d");
+
+      // format the data
+      data.forEach(function (d) {
+        d.date = parseTime(d.date);
+        d.value = +d.value;
+        d.value2 = +d.value2;
+      });
+
+      var x = d3.scaleTime().range([0, width]);
+      var y = d3.scaleLinear().range([height, 0]);
+
+      // define the 1st line
+      var valueline = d3.line()
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d.value); });
+
+      // define the 2nd line
+      var valueline2 = d3.line()
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d.value2); });
+
+      // Scale the range of the data
+      x.domain(d3.extent(data, function (d) { return d.date; }));
+      y.domain([0, d3.max(data, function (d) {
+        return Math.max(d.value, d.value2);
+      })]);
+
+      // Handmade legend
+      svgline.append("circle").attr("cx", 20).attr("cy", 480).attr("r", 6).style("fill", "blue")
+      svgline.append("circle").attr("cx", 20).attr("cy", 510).attr("r", 6).style("fill", "red")
+      svgline.append("text").attr("x", 40).attr("y", 480).text("Flight Search").style("font-size", "15px").attr("alignment-baseline", "middle")
+      svgline.append("text").attr("x", 40).attr("y", 510).text("Hotel Search").style("font-size", "15px").attr("alignment-baseline", "middle")
+
+      // Add the valueline path.
+      svgline.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .style("stroke", "blue")
+        .attr("stroke-width", 2.5)
+        .attr("fill-opacity", 0)
+        .attr("d", valueline);
+
+      // Add the valueline2 path.
+      svgline.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .style("stroke", "red")
+        .attr("stroke-width", 2.5)
+        .attr("fill-opacity", 0)
+        .attr("d", valueline2);
+
+      // Add the X Axis
+      svgline.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+      // Add the Y Axis
+      svgline.append("g")
+        .call(d3.axisLeft(y));
+
+    });
   </script>
 </body>
 

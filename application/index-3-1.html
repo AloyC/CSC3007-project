@@ -96,13 +96,7 @@
               <li><a href="index-2-1.html">Visualization Chart 2</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Milestone 2</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="index-3.html">Visualization Chart 1</a></li>
-              <li><a href="index-3-1.html">Visualization Chart 2</a></li>
-            </ul>
-          </li>
+          <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
           <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
 
@@ -494,114 +488,102 @@
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
     //Read the data
-    d3.csv("./google-trends.csv",
-    
-      // When reading the csv, I must format variables:
-      function (d) {
-        return { date: d3.timeParse("%Y-%m-%d")(d.date), value: d.value}
-      }).then(
+    // d3.csv("./google-trends.csv",
 
-      
-        // Now I can use this dataset:
-        function (data) {
-
-          // Add X axis --> it is a date format
-          const x = d3.scaleTime()
-            .domain(d3.extent(data, function (d) { return d.date; }))
-            .range([0, width]);
-          svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(d3.axisBottom(x));
-
-          // Add Y axis
-          const y = d3.scaleLinear()
-            .domain([0, d3.max(data, function (d) { return +d.value; })])
-            .range([height, 0]);
-          svg.append("g")
-            .call(d3.axisLeft(y));
-
-          // Add the line
-          svg.append("path")
-            .datum(data)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 2.5)
-            .attr("d", d3.line()
-              .x(function (d) { return x(d.date) })
-              .y(function (d) { return y(d.value) })
-            )
-        })
+    //   // When reading the csv, I must format variables:
+    //   function (d) {
+    //     return { date: d3.timeParse("%Y-%m-%d")(d.date), value: d.value, value2: d.value2}
+    //   }).then(
 
 
-    // //Read the data
-    // d3.csv("./google-trends.csv").then(function (data) {
-    //   console.log(data)
-    //   // group the data, draw one line per group
-    //   //const sumstat = d3.group(data, d => d.singapore_flights_search); // nest function allows to group the calculation per level of a factor
-    //   // const sumstat2 = d3.group(data, d => d.singapore_hotels_search); // nest function allows to group the calculation per level of a factor
+    //     // Now I can use this dataset:
+    //     function (data) {
 
+    //       // Add X axis --> it is a date format
+    //       const x = d3.scaleTime()
+    //         .domain(d3.extent(data, function (d) { return d.date; }))
+    //         .range([0, width]);
+    //       svg.append("g")
+    //         .attr("transform", `translate(0, ${height})`)
+    //         .call(d3.axisBottom(x));
 
-    //   // Add X axis --> it is a date format
-    //   const x = d3.scaleLinear()
-    //     .domain(d3.extent(data, function (d) { return d.Day; }))
-    //     .range([0, width]);
-    //   svg.append("g")
-    //     .attr("transform", `translate(0, ${height})`)
-    //     .call(d3.axisBottom(x).ticks(5));
+    //       // Add Y axis
+    //       const y = d3.scaleLinear()
+    //         .domain([0, d3.max(data, function (d) { return +d.value; })])
+    //         .range([height, 0]);
+    //       svg.append("g")
+    //         .call(d3.axisLeft(y));
 
-    //   // Add Y axis
-    //   const y = d3.scaleLinear()
-    //     .domain([0, d3.max(data, function (d) { return +d.singapore_flights_search; })])
-    //     .range([height, 0]);
-    //   svg.append("g")
-    //     .call(d3.axisLeft(y));
-
-    //   // Build color scale
-    //   const color = d3.scaleOrdinal()
-    //     .range(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'])
-
-
-    //   // // Set the legend for the colorscale
-    //   // var legend = d3.legendColor()
-    //   //   .cells(3)
-    //   //   .scale(color)
-    //   //   .shapeWidth(585)
-    //   //   .labels(["High Lot Occupancy", "", "Low Lot Occupancy"])
-    //   //   .title("Total Available Lots in Singapore: 4,958,636")
-    //   //   .orient("horizontal");
-
-    //   // svg.append("g")
-    //   //   .attr("class", "legend")
-    //   //   .attr("transform", "translate(20,480)")
-    //   //   .call(legend);
-
-    //   // // Create a tooltip
-    //   // const tooltip = d3.select("#my_dataviz")
-    //   //   .append("div")
-    //   //   .style("opacity", 0)
-    //   //   .attr("class", "tooltip")
-    //   //   .style("background-color", "white")
-    //   //   .style("border", "solid")
-    //   //   .style("border-width", "2px")
-    //   //   .style("border-radius", "5px")
-    //   //   .style("padding", "5px")
-    //   // .style('transform', `translate(` + `calc( -50% + ${x}px),` + `calc(-50% + ${y}px)` + `)`);
-
-    //   // Draw the line
-    //   svg.selectAll(".line")
-    //     .data(sumstat)
-    //     .join("path")
-    //     .attr("fill", "none")
-    //     .attr("stroke", function (d) { return color(d[0]) })
-    //     .attr("stroke-width", 1.5)
-    //     .attr("d", function (d) {
-    //       return d3.line()
-    //         .x(function (d) { return x(d.Day); })
-    //         .y(function (d) { return y(+d.n); })
-    //         (d[1])
+    //       // Add the line
+    //       svg.append("path")
+    //         .datum(data)
+    //         .attr("fill", "none")
+    //         .attr("stroke", "steelblue")
+    //         .attr("stroke-width", 2.5)
+    //         .attr("d", d3.line()
+    //           .x(function (d) { return x(d.date) })
+    //           .y(function (d) { return y(d.value) })
+    //         )
     //     })
 
-    // })
+    // Get the data
+    d3.csv("./google-trends.csv").then(function (data) {
+
+      // parse the date / time
+      var parseTime = d3.timeParse("%Y-%m-%d");
+
+      // format the data
+      data.forEach(function (d) {
+        d.date = parseTime(d.date);
+        d.value = +d.value;
+        d.value2 = +d.value2;
+      });
+
+
+      var x = d3.scaleTime().range([0, width]);
+      var y = d3.scaleLinear().range([height, 0]);
+
+      // define the 1st line
+      var valueline = d3.line()
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d.value); });
+
+      // define the 2nd line
+      var valueline2 = d3.line()
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d.value2); });
+
+      // Scale the range of the data
+      x.domain(d3.extent(data, function (d) { return d.date; }));
+      y.domain([0, d3.max(data, function (d) {
+        return Math.max(d.value, d.value2);
+      })]);
+
+
+      // Add the valueline path.
+      svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .style("stroke", "blue")
+        .attr("d", valueline);
+
+      // Add the valueline2 path.
+      svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .style("stroke", "red")
+        .attr("d", valueline2);
+
+      // Add the X Axis
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+      // Add the Y Axis
+      svg.append("g")
+        .call(d3.axisLeft(y));
+
+    });
 
   </script>
 </body>

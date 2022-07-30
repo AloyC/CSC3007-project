@@ -631,7 +631,7 @@
         .y(function (d) { return y(d.value2); });
 
       // Scale the range of the data
-      x.domain(d3.extent(data, function (d) { return d.date; }));
+      x.domain(d3.extent(data, function (d) {return d.date;})).nice();
       y.domain([0, d3.max(data, function (d) {
         return Math.max(d.value, d.value2);
       })]);

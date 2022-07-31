@@ -124,16 +124,15 @@
     <!-- ======= Background Section ======= -->
     <section id="background" class="background">
       <div class="container" data-aos="fade-up">
-
         <div class="section-header">
           <h2>Background</h2>
           <p>In response to COVID-19, the news and social media deliver myriad visualizations about not only the
-            progression of the pandemic, but also
-            how measures taken to mitigate it have affected daily life and the country economy. Following the major
-            lockdown in Singapore in year 2020, many individuals had
-            to greatly adjust their working lifestyle to a home-based working environment instead of working in an
-            office. Consequently, traffic will also be greatly reduced since
-            people will mostly remain at home most of the time and only leave their homes to purchase essential items.
+            progression of the pandemic, but also how measures taken to mitigate it have affected daily life and the
+            country economy.
+            Following the major lockdown in Singapore in year 2020, many individuals had to greatly adjust their working
+            lifestyle to a home-based working environment instead of working in an
+            office. Consequently, traffic will also be greatly reduced since people will mostly remain at home most of
+            the time and only leave their homes to purchase essential items.
           </p>
         </div>
       </div>
@@ -191,7 +190,6 @@
         </ul>
 
         <div class="tab-content">
-
           <div class="tab-pane active show" id="tab-1">
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
@@ -204,11 +202,13 @@
                   we have critiqued in <a href="index-2.html">Milestone 1</a>. The visualization we have chosen to do is
                   a Heatmap using the D3 library, to enable users to visualize the availability of HDB carparks lots for
                   cars during the period from April 2020 to July 2020. This visualization is used to show the effect
-                  that the
-                  COVID-19 pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots
-                  availability as a indication of road traffic. It is assumed that the higher the number of available
-                  lots, there is
-                  more traffic on the road.
+                  that the COVID-19 pandemic had to Singapore Roads and how it affected traffic. We have used HDB car
+                  lots availability as a indication of road traffic. It is assumed that the higher the number of available lots, there is more traffic on the road.<br><br>
+                  Additionally, we have also created two more sets of charts (line and bar charts) to explain the
+                  storyline to our topic of interest. A line chart is shown in order to illustrate the utilization of Singapore Flights and Hotels during the COVID-19 pandemic,
+                  which is consistent with the Circuit Breaker period starting.
+                  While the bar chart illustrates that economic growth in Singapore has been subjected to "fits and starts" since the beginning of the year, as successive waves
+                  of infections have lef to movement restrictions being imposed and then lifted.
                 </p>
                 <ul>
               </div>
@@ -223,30 +223,56 @@
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1">
                 <h3>Dataset</h3>
-                <p>As explained from Milestone 1, there is no publicly available dataset on road traffic in Singapore,
-                  such as the number of cars on the road.
-                  Singapore Land Transport Authority (LTA) provides a dataset to view real time travel times across
-                  Singapore, and may suggest the number of cars
-                  on the road. However, the API does not allow for querying for historical data, therefore we are unable
-                  to retrieve past trends. <br><br>
-                  Therefore, we have followed the same dataset that was used in Milestone 1. In the absence of better
-                  data, carpark availability was used,
-                  as a reasonable substitute to measure movement of people by car, since it makes movement suggestions
-                  that are reasonably accurate in order to
-                  obtain a clear picture of movements by car. To focus on the residential aspect, only HDB carparks were
-                  considered.
-
-                  Since the API only allows for calls for a specific date and time, we had to conduct data cleaning
-                  using the data pulled from the
-                  <a href="https://data.gov.sg/dataset/carpark-availability">Carpark Availability API</a> from
-                  Data.gov.sg developer resources.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Queried the API for dates and time in range</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Cleaned the data from API and only kept useful information
+                <!-- Tabs -->
+                <ul class="nav nav-pills mb-3">
+                  <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Carpark Availability</a></li>
+                  <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Singapore Flights and Hotels Search</a>
                   </li>
-                  <li><i class="bi bi-check-circle-fill"></i> Stored and sorted in CSV</li>
-                </ul>
+                  <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Singapore GDP</a></li>
+                </ul><!-- End Tabs -->
+                <!-- Tab Content -->
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tab1">
+                    <p>As explained from Milestone 1, there is no publicly available dataset on road traffic in
+                      Singapore, such as the number of cars on the road. Singapore Land Transport Authority (LTA) provides a dataset to view real time travel times across
+                      Singapore, and may suggest the number of cars on the road. However, the API does not allow for querying for historical data, therefore we are
+                      unable to retrieve past trends. <br><br>
+                      Therefore, we have followed the same dataset that was used in Milestone 1. In the absence of
+                      better data, carpark availability was used, as a reasonable substitute to measure movement of people by car, since it makes movement
+                      suggestions that are reasonably accurate in order to obtain a clear picture of movements by car. To focus on the residential aspect, only HDB carparks
+                      were considered. Since the API only allows for calls for a specific date and time, we had to conduct
+                      data cleaning using the data pulled from the <a href="https://data.gov.sg/dataset/carpark-availability">Carpark Availability API</a>
+                      from Data.gov.sg developer resources.
+                    </p>
+                    <ul>
+                      <li><i class="bi bi-check-circle-fill"></i> Queried the API for dates and time in range</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Cleaned the data from API and only kept useful information</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Stored and sorted in CSV format</li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab2">
+                    <p>In the previous dataset, we looked at carpark availability, which determined movement by car. Now, we have a newly discovered dataset from 
+                      <a href="https://trends.google.com/trends/explore?date=2020-03-01%202020-06-30&geo=SG&q=singapore%20flights">Google Trends</a>
+                      regarding Singapore flights and hotel searches within the aviation and tourism industry respectively. The pandemic is not only distrupting people's
+                      lives, but it is also having a huge impact on businesses such as tourism, where tourists and local alike have been unable to travel for leisure or work
+                      reasons due to the major lockdown in Singapore and restrictions set by the World of Health Organization (WHO).
+                    </p>
+                    <ul>
+                      <li><i class="bi bi-check-circle-fill"></i> Solely focused on Singapore flights and hotels frequency but not other countries</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Process the data and only kept useful information based on the stated date range</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Originated from Google Trends and downloaded the dataset in CSV format</li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane" id="tab3">
+                    <p>placeholder
+                    </p>
+                    <ul>
+                      <li><i class="bi bi-check-circle-fill"></i> 1</li>
+                      <li><i class="bi bi-check-circle-fill"></i> 2</li>
+                      <li><i class="bi bi-check-circle-fill"></i> 3</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="col-lg-4 order-1 order-lg-2 text-center">
                 <img src="assets/img/csv.png" alt="" class="img-fluid">
@@ -262,8 +288,8 @@
                   interaction into the visualization by adding a tooltip and mouseover functionalities.
                   Previously, we were unable to understand the data shown from the visualization, therefore we have
                   decided to compile the data and make it visible for the users, so that they can better understand
-                  the trends or patterns in the visualization. To add on, we have also changed the color scale that was
-                  previously misleading. A darker/more intense shade of blue is used to denote higher occupancy
+                  the trends or patterns in the visualization. To add on, we have also changed the color scale that
+                  was previously misleading. A darker or more intense shade of blue is used to denote higher occupancy
                   in the day, at a specific timing.
                 </p>
                 <ul>
@@ -290,16 +316,20 @@
                   <b>What</b>
                 </p>
                 <p>
-                  We have used HDB car lots availability as a indication of road traffic. It is assumed that the higer
+                  We have used HDB car lots availability as a indication of road traffic. It is assumed that the
+                  higer
                   the value of available lots, there is
                   more traffic on the road.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Total number of HDB parking lots in each individual HDB
+                  <li><i class="bi bi-check-circle-fill"></i> Total number of HDB parking lots in each individual
+                    HDB
                     parking</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Total number of occupied lots in individual HDB parking
+                  <li><i class="bi bi-check-circle-fill"></i> Total number of occupied lots in individual HDB
+                    parking
                   </li>
-                  <li><i class="bi bi-check-circle-fill"></i> Type of lots at each individual carpark and their carpark
+                  <li><i class="bi bi-check-circle-fill"></i> Type of lots at each individual carpark and their
+                    carpark
                     code</li>
                   <li><i class="bi bi-check-circle-fill"></i> Specific Date and Time</li>
                 </ul>
@@ -309,8 +339,10 @@
                 </p>
                 <p>
                   This visualization is done as an explanatory purpose to show the effect that the COVID-19
-                  pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots availability
-                  as a indication of road traffic. It is assumed that the higer the value of available lots, there is
+                  pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots
+                  availability
+                  as a indication of road traffic. It is assumed that the higer the value of available lots, there
+                  is
                   more traffic on the road. We also used a tooltip to show a more indepth each square's value and
                   percentage of the total available
                   and occupied lots in Singapore.
@@ -322,7 +354,8 @@
                 <p>
                   The visualization chosen is a Heatmap that utilized D3 library, to enable users to visualize
                   the availability of HDB carparks lots for cars during the period from April 2020 to July 2020. By
-                  using the amomunt of occupancy in the carparks, the heatmap would display a darker color to represent
+                  using the amomunt of occupancy in the carparks, the heatmap would display a darker color to
+                  represent
                   a higher number of lot occupancy
                   and lighter color as lower number of lot occupancy. With a tooltip that would also show the total
                   number of available lots,
@@ -340,14 +373,16 @@
               <div class="col-lg-8 order-2 order-lg-1">
                 <h3>Challenges Faced</h3>
                 <p>
-                  There were some challenges faced by the team during the process of implementing improved version of <a
+                  There were some challenges faced by the team during the process of implementing improved version
+                  of <a
                     href="https://ual.sg/post/2020/04/12/singapores-urban-data-affirms-the-compliance-with-the-circuit-breaker-measures/">visualization</a>
                   that had been critiqued in <a href="index-2.html">Milestone 1</a> and are listed below:
                 </p>
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i>Working with the API data</li>
                   <li><i class="bi bi-check-circle-fill"></i>Cleaning and sorting the retrieved API data </li>
-                  <li><i class="bi bi-check-circle-fill"></i>Rethinking the process of how to enable users to understand
+                  <li><i class="bi bi-check-circle-fill"></i>Rethinking the process of how to enable users to
+                    understand
                     the story that we want to convey through the visualization chart</li>
                   <li><i class="bi bi-check-circle-fill"></i>Some functionalities of the D3 library clashes with the
                     Bootstrap library</li>
@@ -371,16 +406,20 @@
               <div class="col-lg-8 order-2 order-lg-1">
                 <h3>Future Work</h3>
                 <p>
-                  In light of this, the team has came to a conclusion and makes the following suggestions to enhance the
+                  In light of this, the team has came to a conclusion and makes the following suggestions to enhance
+                  the
                   improved version of the visualization chart:
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> It may have an expandable feature within each square that
+                  <li><i class="bi bi-check-circle-fill"></i> It may have an expandable feature within each square
+                    that
                     the viewer can expand to view a more detailed
-                    description of the daily availability of carpark lots at specific timings (e.g., 9am, 12pm, etc.)
+                    description of the daily availability of carpark lots at specific timings (e.g., 9am, 12pm,
+                    etc.)
                     within the week.
                   </li>
-                  <li><i class="bi bi-check-circle-fill"></i> As an extension of the previous point, it is preferable to
+                  <li><i class="bi bi-check-circle-fill"></i> As an extension of the previous point, it is
+                    preferable to
                     have a line or bar chart in that expanded page to represent the additional data.
                   </li>
                 </ul>

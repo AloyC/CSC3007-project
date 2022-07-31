@@ -483,8 +483,8 @@
   <script>
 
     var margin = { top: 20, right: 30, bottom: 40, left: 30 },
-      width = 960 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+      width = 1750 - margin.left - margin.right,
+      height = 700 - margin.top - margin.bottom;
 
     const svg = d3.select("#my_linechart")
       .append("svg")
@@ -494,14 +494,24 @@
       .append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    d3.csv("./world_GDP.csv").then(function (data) {
+    d3.csv("./world_GDP1.csv").then(function (data) {
       console.log(data);
 
-      const y2017 = data.filter(function(d) { return d.CountryCode=== "SGP" })[0].value2017;
-      console.log(y2017)
+      // const y2017 = data.filter(function(d) { return d.CountryCode=== "SGP" })[0].value2017;
+      // const y2018 = data.filter(function(d) { return d.CountryCode=== "SGP" })[0].value2018;
+      // const y2019 = data.filter(function(d) { return d.CountryCode=== "SGP" })[0].value2019;
+      // const y2020 = data.filter(function(d) { return d.CountryCode=== "SGP" })[0].value2020;
+      // const y2021 = data.filter(function(d) { return d.CountryCode=== "SGP" })[0].value2021;
+      // console.log("Year 2017: " + y2017)
+      // console.log("Year 2018: " + y2018)
+      // console.log("Year 2019: " + y2019)
+      // console.log("Year 2020: " + y2020)
+      // console.log("Year 2021: " + y2021)
+
+      // var value = (y2017, y2018, y2019, y2020, y2021)
 
       var y = d3.scaleBand()
-        .range([height, 0])
+        .range([0, height])
         .padding(0.1);
 
       var x = d3.scaleLinear()
@@ -509,17 +519,22 @@
 
       // Scale the range of the data in the domains
       var min = d3.min(data, function (d) { return d.value });
+      // var min = value;
+      // var max = value;
       var max = d3.max(data, function (d) { return d.value });
       var absMax = Math.max(Math.abs(min), Math.abs(max));
       x.domain([-absMax, absMax]);
       y.domain(data.map(function (d) {
-        return d.dataset;
+        return d.year;
       }));
 
       // append the rectangles for the bar chart
       svg.selectAll(".bar")
         .data(data)
         .enter().append("rect")
+        // .attr("class", value < 0 ? "negative" : "positive")
+        // .attr("x", Math.min(0,value))
+        // .attr("y", )
         .attr("class", function (d) {
           return "bar bar--" + (d.value < 0 ? "negative" : "positive");
         })
@@ -527,7 +542,7 @@
           return x(Math.min(0, d.value));
         })
         .attr("y", function (d) {
-          return y(d.dataset);
+          return y(d.year);
         })
         .attr("width", function (d) {
           return Math.abs(x(d.value) - x(0));
@@ -544,10 +559,13 @@
         .attr("class", "y axis")
         .attr("transform", "translate(" + x(0) + ",0)")
         .call(d3.axisRight(y));
+
       yAxisGroup.selectAll('.tick')
         .data(data)
         .select('text')
         .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
+        // .attr('x', value < 0 ? 9 : -9 )
+        // .style('text-anchor', value < 0 ? 'start' : 'end' )
         .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
 
     });

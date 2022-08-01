@@ -709,10 +709,10 @@
       })]);
 
       // Handmade legend for line chart
-      svgline.append("circle").attr("cx", 20).attr("cy", 480).attr("r", 10).style("fill", "blue")
-      svgline.append("circle").attr("cx", 190).attr("cy", 480).attr("r", 10).style("fill", "red")
-      svgline.append("text").attr("x", 40).attr("y", 480).text("Flight Search").style("font-size", "20px").attr("alignment-baseline", "middle")
-      svgline.append("text").attr("x", 210).attr("y", 480).text("Hotel Search").style("font-size", "20px").attr("alignment-baseline", "middle")
+      svgline.append("circle").attr("cx", 1550).attr("cy", 30).attr("r", 10).style("fill", "blue")
+      svgline.append("circle").attr("cx", 1550).attr("cy", 70).attr("r", 10).style("fill", "red")
+      svgline.append("text").attr("x", 1575).attr("y", 30).text("Flight Search").style("font-size", "20px").attr("alignment-baseline", "middle")
+      svgline.append("text").attr("x", 1575).attr("y", 70).text("Hotel Search").style("font-size", "20px").attr("alignment-baseline", "middle")
 
       // Create a tooltip
       const tooltip = d3.select("#my_linechart")

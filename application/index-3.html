@@ -617,7 +617,6 @@
         .style("border-width", "2px")
         .style("border-radius", "5px")
         .style("padding", "5px")
-      // .style('transform', `translate(` + `calc( -50% + ${x}px),` + `calc(-50% + ${y}px)` + `)`);
 
       // Add the squares
       svg.selectAll()
@@ -758,14 +757,14 @@
     });
 
     var marginbar = { top: 10, right: 30, bottom: -10, left: 30 },
-      widthbar = 1250 - marginbar.left - marginbar.right,
-      heightbar = 350 - marginbar.top - marginbar.bottom;
+      widthbar = 1350 - marginbar.left - marginbar.right,
+      heightbar = 450 - marginbar.top - marginbar.bottom;
 
     const svgbar = d3.select("#my_barchart")
       .append("svg")
       .attr("width", widthbar + marginbar.left + marginbar.right)
       .attr("height", heightbar + marginbar.top + marginbar.bottom + 100)
-      .attr("viewBox", "0 0 1900 430")
+      .attr("viewBox", "0 0 1900 480")
       .append("g")
       .attr("transform", `translate(${marginbar.left}, ${marginbar.top})`);
 
@@ -791,9 +790,6 @@
       svgbar.selectAll(".bar")
         .data(data)
         .enter().append("rect")
-        // .attr("class", value < 0 ? "negative" : "positive")
-        // .attr("x", Math.min(0,value))
-        // .attr("y", )
         .attr("class", function (d) {
           return "bar bar--" + (d.value < 0 ? "negative" : "positive");
         })
@@ -806,7 +802,7 @@
         .attr("width", function (d) {
           return Math.abs(x(d.value) - x(0));
         })
-        .attr("height", y.bandwidth());
+        .attr("height", y.bandwidth())
 
       // add the x Axis
       svgbar.append("g")
@@ -825,8 +821,6 @@
         .data(data)
         .select('text')
         .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
-        // .attr('x', value < 0 ? 9 : -9 )
-        // .style('text-anchor', value < 0 ? 'start' : 'end' )
         .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
 
     });

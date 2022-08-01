@@ -71,6 +71,14 @@
       padding: 8px;
       background-color: lightblue;
     }
+
+    .bar--positive {
+      fill: steelblue;
+    }
+
+    .bar--negative {
+      fill: red;
+    }
   </style>
 </head>
 
@@ -116,6 +124,10 @@
         <h1>Singapore Flights and Hotels Search During the Pandemic</H1>
         <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
         <div id="my_linechart" style="align-self: center;"></div>
+        <br>
+        <h1>Singapore GDP During the Pandemic</H1>
+        <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
+        <div id="my_barchart" style="align-self: center;"></div>
       </div>
     </div>
   </section>
@@ -203,11 +215,14 @@
                   a Heatmap using the D3 library, to enable users to visualize the availability of HDB carparks lots for
                   cars during the period from April 2020 to July 2020. This visualization is used to show the effect
                   that the COVID-19 pandemic had to Singapore Roads and how it affected traffic. We have used HDB car
-                  lots availability as a indication of road traffic. It is assumed that the higher the number of available lots, there is more traffic on the road.<br><br>
+                  lots availability as a indication of road traffic. It is assumed that the higher the number of
+                  available lots, there is more traffic on the road.<br><br>
                   Additionally, we have also created two more sets of charts (line and bar charts) to explain the
-                  storyline to our topic of interest. A line chart is shown in order to illustrate the utilization of Singapore Flights and Hotels during the COVID-19 pandemic,
+                  storyline to our topic of interest. A line chart is shown in order to illustrate the utilization of
+                  Singapore Flights and Hotels during the COVID-19 pandemic,
                   which is consistent with the Circuit Breaker period starting.
-                  While the bar chart illustrates that economic growth in Singapore has been subjected to "fits and starts" since the beginning of the year, as successive waves
+                  While the bar chart illustrates that economic growth in Singapore has been subjected to "fits and
+                  starts" since the beginning of the year, as successive waves
                   of infections have lef to movement restrictions being imposed and then lifted.
                 </p>
                 <ul>
@@ -234,33 +249,49 @@
                 <div class="tab-content">
                   <div class="tab-pane fade show active" id="tab1">
                     <p>As explained from Milestone 1, there is no publicly available dataset on road traffic in
-                      Singapore, such as the number of cars on the road. Singapore Land Transport Authority (LTA) provides a dataset to view real time travel times across
-                      Singapore, and may suggest the number of cars on the road. However, the API does not allow for querying for historical data, therefore we are
+                      Singapore, such as the number of cars on the road. Singapore Land Transport Authority (LTA)
+                      provides a dataset to view real time travel times across
+                      Singapore, and may suggest the number of cars on the road. However, the API does not allow for
+                      querying for historical data, therefore we are
                       unable to retrieve past trends. <br><br>
                       Therefore, we have followed the same dataset that was used in Milestone 1. In the absence of
-                      better data, carpark availability was used, as a reasonable substitute to measure movement of people by car, since it makes movement
-                      suggestions that are reasonably accurate in order to obtain a clear picture of movements by car. To focus on the residential aspect, only HDB carparks
-                      were considered. Since the API only allows for calls for a specific date and time, we had to conduct
-                      data cleaning using the data pulled from the <a href="https://data.gov.sg/dataset/carpark-availability">Carpark Availability API</a>
+                      better data, carpark availability was used, as a reasonable substitute to measure movement of
+                      people by car, since it makes movement
+                      suggestions that are reasonably accurate in order to obtain a clear picture of movements by car.
+                      To focus on the residential aspect, only HDB carparks
+                      were considered. Since the API only allows for calls for a specific date and time, we had to
+                      conduct
+                      data cleaning using the data pulled from the <a
+                        href="https://data.gov.sg/dataset/carpark-availability">Carpark Availability API</a>
                       from Data.gov.sg developer resources.
                     </p>
                     <ul>
                       <li><i class="bi bi-check-circle-fill"></i> Queried the API for dates and time in range</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Cleaned the data from API and only kept useful information</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Cleaned the data from API and only kept useful
+                        information</li>
                       <li><i class="bi bi-check-circle-fill"></i> Stored and sorted in CSV format</li>
                     </ul>
                   </div>
                   <div class="tab-pane" id="tab2">
-                    <p>In the previous dataset, we looked at carpark availability, which determined movement by car. Now, we have a newly discovered dataset from 
-                      <a href="https://trends.google.com/trends/explore?date=2020-03-01%202020-06-30&geo=SG&q=singapore%20flights">Google Trends</a>
-                      regarding Singapore flights and hotel searches within the aviation and tourism industry respectively. The pandemic is not only distrupting people's
-                      lives, but it is also having a huge impact on businesses such as tourism, where tourists and local alike have been unable to travel for leisure or work
-                      reasons due to the major lockdown in Singapore and restrictions set by the World of Health Organization (WHO).
+                    <p>In the previous dataset, we looked at carpark availability, which determined movement by car.
+                      Now, we have a newly discovered dataset from
+                      <a
+                        href="https://trends.google.com/trends/explore?date=2020-03-01%202020-06-30&geo=SG&q=singapore%20flights">Google
+                        Trends</a>
+                      regarding Singapore flights and hotel searches within the aviation and tourism industry
+                      respectively. The pandemic is not only distrupting people's
+                      lives, but it is also having a huge impact on businesses such as tourism, where tourists and local
+                      alike have been unable to travel for leisure or work
+                      reasons due to the major lockdown in Singapore and restrictions set by the World of Health
+                      Organization (WHO).
                     </p>
                     <ul>
-                      <li><i class="bi bi-check-circle-fill"></i> Solely focused on Singapore flights and hotels frequency but not other countries</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Process the data and only kept useful information based on the stated date range</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Originated from Google Trends and downloaded the dataset in CSV format</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Solely focused on Singapore flights and hotels
+                        frequency but not other countries</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Process the data and only kept useful information
+                        based on the stated date range</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Originated from Google Trends and downloaded the
+                        dataset in CSV format</li>
                     </ul>
                   </div>
                   <div class="tab-pane" id="tab3">
@@ -632,9 +663,9 @@
     })
 
     // Margins for the line chart
-    const marginline = { top: 10, right: 30, bottom: -350, left: 60 },
-      widthline = 1900 - margin.left - margin.right,
-      heighline = 1100 - margin.top - margin.bottom;
+    const marginline = { top: 150, right: 30, bottom: -10, left: 60 },
+      widthline = 1500 - marginline.left - marginline.right,
+      heighline = 500 - marginline.top - marginline.bottom;
 
     // Append the svg object to the body of the page for line chart
     const svgline = d3.select("#my_linechart")
@@ -656,7 +687,7 @@
         d.value = +d.value;
         d.value2 = +d.value2;
         date = d.date
-        console.log(date)
+        // console.log(date)
       });
 
       var x = d3.scaleTime().range([0, width]);
@@ -723,6 +754,80 @@
       svgline.append("g")
         .style("font", "10px")
         .call(d3.axisLeft(y));
+
+    });
+
+    var marginbar = { top: 10, right: 30, bottom: -10, left: 30 },
+      widthbar = 1250 - marginbar.left - marginbar.right,
+      heightbar = 350 - marginbar.top - marginbar.bottom;
+
+    const svgbar = d3.select("#my_barchart")
+      .append("svg")
+      .attr("width", widthbar + marginbar.left + marginbar.right)
+      .attr("height", heightbar + marginbar.top + marginbar.bottom + 100)
+      .attr("viewBox", "0 0 1900 430")
+      .append("g")
+      .attr("transform", `translate(${marginbar.left}, ${marginbar.top})`);
+
+    d3.csv("./Singapore_GDP.csv").then(function (data) {
+
+      var y = d3.scaleBand()
+        .range([0, height])
+        .padding(0.1);
+
+      var x = d3.scaleLinear()
+        .range([0, width]);
+
+      // Scale the range of the data in the domains
+      var min = d3.min(data, function (d) { return d.value });
+      var max = d3.max(data, function (d) { return d.value });
+      var absMax = Math.max(Math.abs(min), Math.abs(max));
+      x.domain([-absMax, absMax]);
+      y.domain(data.map(function (d) {
+        return d.year;
+      }));
+
+      // append the rectangles for the bar chart
+      svgbar.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        // .attr("class", value < 0 ? "negative" : "positive")
+        // .attr("x", Math.min(0,value))
+        // .attr("y", )
+        .attr("class", function (d) {
+          return "bar bar--" + (d.value < 0 ? "negative" : "positive");
+        })
+        .attr("x", function (d) {
+          return x(Math.min(0, d.value));
+        })
+        .attr("y", function (d) {
+          return y(d.year);
+        })
+        .attr("width", function (d) {
+          return Math.abs(x(d.value) - x(0));
+        })
+        .attr("height", y.bandwidth());
+
+      // add the x Axis
+      svgbar.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .style("font", "15px")
+        .call(d3.axisBottom(x));
+
+      // add the y Axis
+      let yAxisGroup = svgbar.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(" + x(0) + ",0)")
+        .style("font", "15px")
+        .call(d3.axisRight(y));
+
+      yAxisGroup.selectAll('.tick')
+        .data(data)
+        .select('text')
+        .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
+        // .attr('x', value < 0 ? 9 : -9 )
+        // .style('text-anchor', value < 0 ? 'start' : 'end' )
+        .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
 
     });
   </script>

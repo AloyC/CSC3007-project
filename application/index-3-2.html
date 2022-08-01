@@ -517,9 +517,6 @@
       svg.selectAll(".bar")
         .data(data)
         .enter().append("rect")
-        // .attr("class", value < 0 ? "negative" : "positive")
-        // .attr("x", Math.min(0,value))
-        // .attr("y", )
         .attr("class", function (d) {
           return "bar bar--" + (d.value < 0 ? "negative" : "positive");
         })
@@ -551,8 +548,6 @@
         .data(data)
         .select('text')
         .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
-        // .attr('x', value < 0 ? 9 : -9 )
-        // .style('text-anchor', value < 0 ? 'start' : 'end' )
         .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
 
     });

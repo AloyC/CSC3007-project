@@ -520,7 +520,7 @@
       width = 1750 - margin.left - margin.right,
       height = 450 - margin.top - margin.bottom;
 
-    // Append the svg object to the body of the page
+    // Append the svg object to the body of the page for the heatmap
     const svg = d3.select("#my_dataviz")
       .append("svg")
       .attr("width", width + margin.left + margin.right)
@@ -529,7 +529,7 @@
       .append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    //Read the data
+    //Read the data for HDB parking
     d3.csv("./parking_data.csv").then(function (data) {
 
       // Labels of row and columns -> unique identifier of the column called 'week' and 'hour'
@@ -633,10 +633,10 @@
 
     // Margins for the line chart
     const marginline = { top: 10, right: 30, bottom: -350, left: 60 },
-      widthline = 1250 - margin.left - margin.right,
-      heighline = 930 - margin.top - margin.bottom;
+      widthline = 1900 - margin.left - margin.right,
+      heighline = 1100 - margin.top - margin.bottom;
 
-    // Append the svg object to the body of the page
+    // Append the svg object to the body of the page for line chart
     const svgline = d3.select("#my_linechart")
       .append("svg")
       .attr("width", widthline + marginline.left + marginline.right)
@@ -655,6 +655,8 @@
         d.date = parseTime(d.date);
         d.value = +d.value;
         d.value2 = +d.value2;
+        date = d.date
+        console.log(date)
       });
 
       var x = d3.scaleTime().range([0, width]);
@@ -676,11 +678,11 @@
         return Math.max(d.value, d.value2);
       })]);
 
-      // Handmade legend
-      svgline.append("circle").attr("cx", 20).attr("cy", 480).attr("r", 6).style("fill", "blue")
-      svgline.append("circle").attr("cx", 20).attr("cy", 510).attr("r", 6).style("fill", "red")
-      svgline.append("text").attr("x", 40).attr("y", 480).text("Flight Search").style("font-size", "15px").attr("alignment-baseline", "middle")
-      svgline.append("text").attr("x", 40).attr("y", 510).text("Hotel Search").style("font-size", "15px").attr("alignment-baseline", "middle")
+      // Handmade legend for line chart
+      svgline.append("circle").attr("cx", 20).attr("cy", 480).attr("r", 10).style("fill", "blue")
+      svgline.append("circle").attr("cx", 190).attr("cy", 480).attr("r", 10).style("fill", "red")
+      svgline.append("text").attr("x", 40).attr("y", 480).text("Flight Search").style("font-size", "20px").attr("alignment-baseline", "middle")
+      svgline.append("text").attr("x", 210).attr("y", 480).text("Hotel Search").style("font-size", "20px").attr("alignment-baseline", "middle")
 
       // Create a tooltip
       const tooltip = d3.select("#my_linechart")
@@ -714,10 +716,12 @@
       // Add the X Axis
       svgline.append("g")
         .attr("transform", "translate(0," + height + ")")
+        .style("font", "10px")
         .call(d3.axisBottom(x));
 
       // Add the Y Axis
       svgline.append("g")
+        .style("font", "10px")
         .call(d3.axisLeft(y));
 
     });

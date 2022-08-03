@@ -817,6 +817,7 @@
       //       "translate(" + x(d.date) + "," + 
       //       y(d.value) + ")"); 
       // }
+
       svgline.selectAll("dot")
         .data(data)
         .enter()
@@ -831,12 +832,11 @@
         .on("mouseover", (event, d) => {
           d3.select(".tooltip")
             .style("position", "absolute")
-            .style("background", "black")
-            // console.log(d.value)
-            .style("opacity", 0.5)
+            .style("background", "white")
+            .style("opacity", 2)
             .html("<b>Flight Search: <br/>" + d.value)
-            .style("left", (event.x) + "px")
-            .style("top", (event.y) + "px");
+            .style("left", (event.pageX - 150) + "px")
+            .style("top", (event.pageY - 100) + "px");
         })
         .on("mouseout", (event, d) => {
           d3.select(".tooltip")
@@ -911,8 +911,10 @@
             .style("background", "#fff")
             .html("<b>Year: </b>" + d.year + '<br>' + "<b>Singapore GDP Anuual Growth (%): </b>" + d.value
               + '<br>' + "<b> Singapore's GDP: </b>" + d.value1)
-            .style("left", (event.x + 900) + "px")
-            .style("top", (event.y - 105) + "px");
+            // .style("left", (event.pageX - 100) + "px")
+            // .style("top", (event.pageY - 200) + "px");
+            .style("left", 200 + "px")
+            .style("top", 1500 + "px");
 
           d3.select(event.currentTarget)
             .style("stroke", "black")
@@ -948,8 +950,6 @@
         .select('text')
         .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
         .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
-
-
     });
   </script>
 </body>

@@ -821,13 +821,9 @@
       svgline.selectAll("dot")
         .data(data)
         .enter()
-        .append("circle")
-        .attr("r", 10)
         .attr("cx", function (d) { return x(d.date); })
         .attr("cy", function (d) { return y(d.value); })
         .style("fill", "none")
-        .style("stroke-width", 2)
-        .style("stroke", "blue")
         .style("opacity", 0.8)
         .on("mouseover", (event, d) => {
           d3.select(".tooltip")

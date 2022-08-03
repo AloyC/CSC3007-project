@@ -788,7 +788,14 @@
             + '<br>' + "<b>Percentage of Occupied Lots: </b>" + d.date)
       }
 
-       // // append the rectangle to capture mouse 
+      // // append the circle at the intersection 
+      // focus.append("circle") 
+      //   .attr("class", "y") 
+      //   .style("fill", "none") 
+      //   .style("stroke", "blue") 
+      //   .attr("r", 10);
+
+      // // append the rectangle to capture mouse 
       // svgline.append("rect") 
       //   .attr("width", width) 
       //   .attr("height", height) 
@@ -825,7 +832,7 @@
           d3.select(".tooltip")
             .style("position", "absolute")
             .style("background", "black")
-          // console.log(d.value)
+            // console.log(d.value)
             .style("opacity", 0.5)
             .html("<b>Flight Search: <br/>" + d.value)
             .style("left", (event.x) + "px")

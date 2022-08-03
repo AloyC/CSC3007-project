@@ -125,8 +125,7 @@
         <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
         <div id="my_linechart" style="align-self: center;"></div>
         <br>
-        <h1>Singapore GDP During the Pandemic</H1>
-        <h3>Circuit Breaker from: 07 Apr 2020 - 01 Jun 2020</h3>
+        <h1>Singapore GDP During the Years of COVID-19</H1>
         <div id="my_barchart" style="align-self: center;"></div>
       </div>
     </div>
@@ -690,8 +689,7 @@
         d.date = parseTime(d.date);
         d.value = +d.value;
         d.value2 = +d.value2;
-        // date = d.date
-        // console.log(date)
+        date = d.date
       });
 
       var x = d3.scaleTime().range([0, width]);
@@ -759,60 +757,37 @@
         .style("font", "10px")
         .call(d3.axisLeft(y));
 
-      // // append the circle at the intersection 
-      // focus.append("circle") 
-      //   .attr("class", "y") 
-      //   .style("fill", "none") 
-      //   .style("stroke", "blue") 
-      //   .attr("r", 10);
-
-      // // append the rectangle to capture mouse 
-      // svgline.append("rect") 
-      //   .attr("width", width) 
-      //   .attr("height", height) 
-      //   .style("fill", "none") 
-      //   .style("pointer-events", "all") 
-      //   .on("mouseover", function () { focus.style("display", null); })
-      //   .on("mouseout", function () { focus.style("display", "none"); })
-      //   .on("mousemove", mousemove);
-
-      // function mousemove() { 
-      //   var x0 = x.invert(d3.pointer(event, this)[0]), 
-      //     i = bisectDate(data, x0, 1), 
-      //     d0 = data[i - 1], 
-      //     d1 = data[i], 
-      //     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-
-      //   focus.select("circle.y") 
-      //     .attr("transform", 
-      //       "translate(" + x(d.date) + "," + 
-      //       y(d.value) + ")"); 
-      // }
-      svgline.selectAll("dot")
-        .data(data)
-        .enter()
-        .append("circle")
-        .attr("r", 10)
-        .attr("cx", function (d) { return x(d.date); })
-        .attr("cy", function (d) { return y(d.value); })
+      // append the circle at the intersection 
+      focus.append("circle")
+        .attr("class", "y")
         .style("fill", "none")
-        .style("stroke-width", 2)
-        .style("stroke", "blue")
-        .style("opacity", 0.8)
-        .on("mouseover", (event, d) => {
-          d3.select(".tooltip")
-            .style("position", "absolute")
-            .style("background", "black")
-          // console.log(d.value)
-            .style("opacity", 0.5)
-            .html("<b>Flight Search: <br/>" + d.value)
-            .style("left", (event.x) + "px")
-            .style("top", (event.y) + "px");
-        })
-        .on("mouseout", (event, d) => {
-          d3.select(".tooltip")
-            .style("opacity", 0);
-        });
+        .style("stroke", "black")
+        .attr("stroke-width", 2.5)
+        .attr("r", 10);
+
+      // append the rectangle to capture mouse 
+      svgline.append("rect")
+        .attr("width", width)
+        .attr("height", height)
+        .style("fill", "none")
+        .style("pointer-events", "all")
+        .on("mouseover", function () { focus.style("display", null); })
+        .on("mouseout", function () { focus.style("display", "none"); })
+        .on("mousemove", mousemove);
+
+      function mousemove() {
+        var x0 = x.invert(d3.pointer(event, this)[0]),
+          i = bisectDate(data, x0, 1),
+          d0 = data[i - 1],
+          d1 = data[i],
+          d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+        focus.select("circle.y")
+          .attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")")
+          .html("<b>Total Available Lots: </b>" + d.value + '<br>' + "<b>Percentage of Available Lots: </b>" + d.value2
+            + '<br>' + "<b>Percentage of Occupied Lots: </b>" + d.date)
+      }
+
     });
 
     // Bar chart
@@ -846,6 +821,18 @@
         return d.year;
       }));
 
+      // create a tooltip
+      var Tooltip = d3.select("#my_barchart")
+        .data(data)
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+
       // append the rectangles for the bar chart
       svgbar.selectAll(".bar")
         .data(data)
@@ -863,6 +850,31 @@
           return Math.abs(x(d.value) - x(0));
         })
         .attr("height", y.bandwidth())
+        .on("mouseover", (event, d) => {
+          d3.select(".tooltip")
+            .style("opacity", 2)
+            .style("position", "absolute")
+            .style("background", "#fff")
+            .html("<b>Year: </b>" + d.year + '<br>' + "<b>Singapore GDP Anuual Growth (%): </b>" + d.value
+              + '<br>' + "<b> Singapore's GDP: </b>" + d.value1)
+            .style("left", (event.x + 900) + "px")
+            .style("top", (event.y - 105) + "px");
+
+          d3.select(event.currentTarget)
+            .style("stroke", "black")
+            .style("stroke-width", 4)
+            .style("opacity", 2)
+            .classed("selected", true);
+        })
+
+        .on("mouseout", (event, d) => {
+          d3.select(".tooltip")
+            .style("opacity", 0);
+
+          d3.select(event.currentTarget)
+            .style("stroke", "none")
+            .classed("selected", false);
+        })
 
       // add the x Axis
       svgbar.append("g")
@@ -882,6 +894,7 @@
         .select('text')
         .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
         .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
+
 
     });
   </script>

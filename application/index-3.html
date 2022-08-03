@@ -677,21 +677,20 @@
 
     var lineSvg = svgline.append("g");
 
-    var focus = svgline.append("g") 
+    var focus = svgline.append("g")
       .style("display", "none");
 
     d3.csv("./google-trends.csv").then(function (data) {
 
       // Parse the date / time
       var parseTime = d3.timeParse("%Y-%m-%d");
-      var bisectDate = d3.bisector(function(d) { return d.date; }).left;
-
+      var bisectDate = d3.bisector(function (d) { return d.date; }).left;
       // Format the data
       data.forEach(function (d) {
         d.date = parseTime(d.date);
         d.value = +d.value;
         d.value2 = +d.value2;
-        date = d.date
+        // date = d.date
         // console.log(date)
       });
 
@@ -760,38 +759,63 @@
         .style("font", "10px")
         .call(d3.axisLeft(y));
 
-      // append the circle at the intersection 
-      focus.append("circle") 
-        .attr("class", "y") 
-        .style("fill", "none") 
-        .style("stroke", "blue") 
-        .attr("r", 10);
+      // // append the circle at the intersection 
+      // focus.append("circle") 
+      //   .attr("class", "y") 
+      //   .style("fill", "none") 
+      //   .style("stroke", "blue") 
+      //   .attr("r", 10);
 
-      // append the rectangle to capture mouse 
-      svgline.append("rect") 
-        .attr("width", width) 
-        .attr("height", height) 
-        .style("fill", "none") 
-        .style("pointer-events", "all") 
-        .on("mouseover", function () { focus.style("display", null); })
-        .on("mouseout", function () { focus.style("display", "none"); })
-        .on("mousemove", mousemove);
+      // // append the rectangle to capture mouse 
+      // svgline.append("rect") 
+      //   .attr("width", width) 
+      //   .attr("height", height) 
+      //   .style("fill", "none") 
+      //   .style("pointer-events", "all") 
+      //   .on("mouseover", function () { focus.style("display", null); })
+      //   .on("mouseout", function () { focus.style("display", "none"); })
+      //   .on("mousemove", mousemove);
 
-      function mousemove() { 
-        var x0 = x.invert(d3.pointer(event, this)[0]), 
-          i = bisectDate(data, x0, 1), 
-          d0 = data[i - 1], 
-          d1 = data[i], 
-          d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+      // function mousemove() { 
+      //   var x0 = x.invert(d3.pointer(event, this)[0]), 
+      //     i = bisectDate(data, x0, 1), 
+      //     d0 = data[i - 1], 
+      //     d1 = data[i], 
+      //     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
 
-        focus.select("circle.y") 
-          .attr("transform", 
-            "translate(" + x(d.date) + "," + 
-            y(d.value) + ")"); 
-      }
-
+      //   focus.select("circle.y") 
+      //     .attr("transform", 
+      //       "translate(" + x(d.date) + "," + 
+      //       y(d.value) + ")"); 
+      // }
+      svgline.selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("r", 10)
+        .attr("cx", function (d) { return x(d.date); })
+        .attr("cy", function (d) { return y(d.value); })
+        .style("fill", "none")
+        .style("stroke-width", 2)
+        .style("stroke", "blue")
+        .style("opacity", 0.8)
+        .on("mouseover", (event, d) => {
+          d3.select(".tooltip")
+            .style("position", "absolute")
+            .style("background", "black")
+          // console.log(d.value)
+            .style("opacity", 0.5)
+            .html("<b>Flight Search: <br/>" + d.value)
+            .style("left", (event.x) + "px")
+            .style("top", (event.y) + "px");
+        })
+        .on("mouseout", (event, d) => {
+          d3.select(".tooltip")
+            .style("opacity", 0);
+        });
     });
 
+    // Bar chart
     var marginbar = { top: 10, right: 30, bottom: -10, left: 30 },
       widthbar = 1350 - marginbar.left - marginbar.right,
       heightbar = 450 - marginbar.top - marginbar.bottom;

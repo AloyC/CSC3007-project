@@ -21,6 +21,7 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -28,7 +29,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Variables CSS Files -->
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
   <link href="assets/css/variables.css" rel="stylesheet">
 
   <!-- Main CSS File -->
@@ -80,12 +81,15 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>CSC3007 Information Visualization<span>.</span></h1>
       </a>
 
@@ -103,10 +107,11 @@
           <li><a class="nav-link scrollto" href="index-3.html">Milestone 2</a></li>
           <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
+
     </div>
   </header><!-- End Header -->
 
-  <section id="main-display" class="main-display d-flex align-items-center">
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
       data-aos="zoom-out">
       <div>
@@ -134,8 +139,9 @@
           <h2>Background</h2>
           <p>In response to COVID-19, the news and social media deliver myriad visualizations about not only the
             progression of the pandemic, but also how measures taken to mitigate it have affected daily life and the
-            country economy. Following the major lockdown in Singapore in year 2020, many individuals had to greatly
-            adjust their working lifestyle to a home-based working environment instead of working in an
+            country economy.
+            Following the major lockdown in Singapore in year 2020, many individuals had to greatly adjust their working
+            lifestyle to a home-based working environment instead of working in an
             office. Consequently, traffic will also be greatly reduced since people will mostly remain at home most of
             the time and only leave their homes to purchase essential items. Essentially, the three visualizations above provides insights on
              the effect of Covid-19 on the Singapore economy (GDP) and the daily life of the people, through inferences made from traffic 
@@ -149,7 +155,9 @@
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
+
         <ul class="nav nav-tabs row gy-4 d-flex">
+
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <i class="bi bi-binoculars color-cyan"></i>
@@ -191,6 +199,7 @@
               <h4>Future Work</h4>
             </a>
           </li><!-- End Tab 6 Nav -->
+
         </ul>
 
         <div class="tab-content">
@@ -344,7 +353,9 @@
                 </p>
                 <p>
                   We have used HDB car lots availability as a indication of road traffic. It is assumed that the
-                  higer the value of available lots, there is more traffic on the road.
+                  higher
+                  the value of available lots, there is
+                  more traffic on the road.
                 </p>
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i> Total number of HDB parking lots in each individual
@@ -365,10 +376,12 @@
                 <p>
                   This visualization is done as an explanatory purpose to show the effect that the COVID-19
                   pandemic had to Singapore Roads and how it affected traffic. We have used HDB car lots
-                  availability as a indication of road traffic. It is assumed that the higer the value of available
-                  lots, there
-                  is more traffic on the road. We also used a tooltip to show a more indepth each square's value and
-                  percentage of the total available and occupied lots in Singapore.
+                  availability
+                  as a indication of road traffic. It is assumed that the higer the value of available lots, there
+                  is
+                  more traffic on the road. We also used a tooltip to show a more indepth each square's value and
+                  percentage of the total available
+                  and occupied lots in Singapore.
                 </p>
                 <br>
                 <p class="fst-italic">
@@ -378,9 +391,11 @@
                   The visualization chosen is a Heatmap that utilized D3 library, to enable users to visualize
                   the availability of HDB carparks lots for cars during the period from April 2020 to July 2020. By
                   using the amomunt of occupancy in the carparks, the heatmap would display a darker color to
-                  represent a higher number of lot occupancy
+                  represent
+                  a higher number of lot occupancy
                   and lighter color as lower number of lot occupancy. With a tooltip that would also show the total
-                  number of available lots, percentage of available lots and the percentage of occupied lots.
+                  number of available lots,
+                  percentage of available lots and the percentage of occupied lots.
                 </p>
               </div>
               <div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -412,7 +427,8 @@
                     source for similar datasets (such as <a href="https://covid19.apple.com/mobility">COVID-19 -
                       Mobility Trends - Apple</a> and <a
                       href="https://citymapper.com/news/2393/citymapper-mobility-index-comes-to-an-end">Citymapper
-                      Mobility Index</a>) but they no longer provide access to the data.</li>
+                      Mobility Index</a>)
+                    but they no longer provide access to the data.</li>
                 </ul>
               </div>
               <div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -427,7 +443,8 @@
                 <h3>Future Work</h3>
                 <p>
                   In light of this, the team has came to a conclusion and makes the following suggestions to enhance
-                  the improved version of the visualization chart:
+                  the
+                  improved version of the visualization chart:
                 </p>
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i> It may have an expandable feature within each square
@@ -438,7 +455,8 @@
                     within the week.
                   </li>
                   <li><i class="bi bi-check-circle-fill"></i> As an extension of the previous point, it is
-                    preferable to have a line or bar chart in that expanded page to represent the additional data.
+                    preferable to
+                    have a line or bar chart in that expanded page to represent the additional data.
                   </li>
                 </ul>
               </div>
@@ -470,7 +488,7 @@
               <td>Aloysius Chia Mu Rong</td>
               <td>1900640</td>
               <td>Data Cleaning<br>
-                Code (Bar Chart)<br>
+                Code<br>
                 Documentation
               </td>
             </tr>
@@ -478,7 +496,7 @@
               <td>Angela Lui An Chi</td>
               <td>1901852</td>
               <td>Data Cleaning<br>
-                Code (Line Chart)<br>
+                Code<br>
                 Documentation
               </td>
             </tr>
@@ -486,7 +504,7 @@
               <td>Khloe Lim Xin Hui</td>
               <td>1901865</td>
               <td>Data Cleaning<br>
-                Code (Heatmap)<br>
+                Code<br>
                 Documentation
               </td>
             </tr>
@@ -547,8 +565,8 @@
       .append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    // Read the data for HDB parking
-    d3.csv("./data/parking_data.csv").then(function (data) {
+    //Read the data for HDB parking
+    d3.csv("./parking_data.csv").then(function (data) {
 
       // Labels of row and columns -> unique identifier of the column called 'week' and 'hour'
       const myGroups = Array.from(new Set(data.map(d => d.week)))
@@ -668,12 +686,11 @@
     var focus = svgline.append("g")
       .style("display", "none");
 
-    d3.csv("./data/google-trends.csv").then(function (data) {
+    d3.csv("./google-trends.csv").then(function (data) {
 
       // Parse the date / time
       var parseTime = d3.timeParse("%Y-%m-%d");
       var bisectDate = d3.bisector(function (d) { return d.date; }).left;
-
       // Format the data
       data.forEach(function (d) {
         d.date = parseTime(d.date);
@@ -747,6 +764,37 @@
         .style("font", "10px")
         .call(d3.axisLeft(y));
 
+      // // append the circle at the intersection 
+      // focus.append("circle")
+      //   .attr("class", "y")
+      //   .style("fill", "none")
+      //   .style("stroke", "black")
+      //   .attr("stroke-width", 2.5)
+      //   .attr("r", 10);
+
+      // // append the rectangle to capture mouse 
+      // svgline.append("rect")
+      //   .attr("width", width)
+      //   .attr("height", height)
+      //   .style("fill", "none")
+      //   .style("pointer-events", "all")
+      //   // .on("mouseover", function () { focus.style("display", null); })
+      //   // .on("mouseout", function () { focus.style("display", "none"); })
+      //    .on("mousemove", mousemove);
+
+      // function mousemove() {
+      //   var x0 = x.invert(d3.pointer(event, this)[0]),
+      //     i = bisectDate(data, x0, 1),
+      //     d0 = data[i - 1],
+      //     d1 = data[i],
+      //     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+      //   focus.select("circle.y")
+      //     .attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")")
+      //     .html("<b>Total Available Lots: </b>" + d.value + '<br>' + "<b>Percentage of Available Lots: </b>" + d.value2
+      //       + '<br>' + "<b>Percentage of Occupied Lots: </b>" + d.date)
+      // }
+
       svgline.selectAll("dot")
         .data(data)
         .enter()
@@ -769,13 +817,12 @@
             .style("left", 200 + "px")
             .style("top", 880 + "px");
         })
-
         .on("mouseout", (event, d) => {
           d3.select(".tooltip")
             .style("opacity", 0);
         });
 
-      svgline.selectAll("dot1")
+        svgline.selectAll("dot1")
         .data(data)
         .enter()
         .append("circle")
@@ -797,19 +844,17 @@
             .style("left", 200 + "px")
             .style("top", 880 + "px");
         })
-
         .on("mouseout", (event, d) => {
           d3.select(".tooltip")
             .style("opacity", 0);
         });
     });
 
-    // Margins for the bar chart
+    // Bar chart
     var marginbar = { top: 10, right: 30, bottom: -10, left: 30 },
       widthbar = 1350 - marginbar.left - marginbar.right,
       heightbar = 450 - marginbar.top - marginbar.bottom;
 
-    // Append the svg object to the body of the page for bar chart
     const svgbar = d3.select("#my_barchart")
       .append("svg")
       .attr("width", widthbar + marginbar.left + marginbar.right)
@@ -818,7 +863,7 @@
       .append("g")
       .attr("transform", `translate(${marginbar.left}, ${marginbar.top})`);
 
-    d3.csv("./data/singapore_GDP.csv").then(function (data) {
+    d3.csv("./Singapore_GDP.csv").then(function (data) {
 
       var y = d3.scaleBand()
         .range([0, height])
@@ -836,8 +881,8 @@
         return d.year;
       }));
 
-      // Create a tooltip
-      var tooltip = d3.select("#my_barchart")
+      // create a tooltip
+      var Tooltip = d3.select("#my_barchart")
         .data(data)
         .append("div")
         .style("opacity", 0)
@@ -848,7 +893,7 @@
         .style("border-radius", "5px")
         .style("padding", "5px")
 
-      // Append the rectangles for the bar chart
+      // append the rectangles for the bar chart
       svgbar.selectAll(".bar")
         .data(data)
         .enter().append("rect")
@@ -873,6 +918,8 @@
             .style("color", "black")
             .html("<b>Year: </b>" + d.year + '<br>' + "<b>Singapore GDP Anuual Growth (%): </b>" + d.value
               + '<br>' + "<b> Singapore's GDP: </b>" + d.value1)
+            // .style("left", (event.pageX - 100) + "px")
+            // .style("top", (event.pageY - 200) + "px");
             .style("left", 200 + "px")
             .style("top", 1500 + "px");
 
@@ -892,13 +939,13 @@
             .classed("selected", false);
         })
 
-      // Add the X Axis
+      // add the x Axis
       svgbar.append("g")
         .attr("transform", "translate(0," + height + ")")
         .style("font", "15px")
         .call(d3.axisBottom(x));
 
-      // Add the Y Axis
+      // add the y Axis
       let yAxisGroup = svgbar.append("g")
         .attr("class", "y axis")
         .attr("transform", "translate(" + x(0) + ",0)")
@@ -911,7 +958,6 @@
         .attr('x', function (d, i) { return d.value < 0 ? 9 : -9 })
         .style('text-anchor', function (d, i) { return d.value < 0 ? 'start' : 'end' })
     });
-
   </script>
 </body>
 

@@ -39,6 +39,8 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+
   <style>
     .html {
       padding-left: 5px;
@@ -225,8 +227,7 @@
                   Singapore Flights and Hotels during the COVID-19 pandemic, which is consistent with the Circuit
                   Breaker period starting. While the bar chart illustrates that economic growth in Singapore has been
                   subjected to "fits and starts" since the beginning of the year, as successive waves of infections have
-                  led to movement
-                  restrictions being imposed and then lifted.
+                  led to movement restrictions being imposed and then lifted.
                 </p>
                 <ul>
               </div>
@@ -696,6 +697,7 @@
 
       // Parse the date / time
       var parseTime = d3.timeParse("%Y-%m-%d");
+      // parseTime = moment(parseTime).format("DD-MMM-YYYY");
       var bisectDate = d3.bisector(function (d) { return d.date; }).left;
 
       // Format the data
@@ -703,7 +705,7 @@
         d.date = parseTime(d.date);
         d.value = +d.value;
         d.value2 = +d.value2;
-        date = d.date
+        // date = d.date
       });
 
       var x = d3.scaleTime().range([0, width]);
@@ -789,7 +791,8 @@
             .style("background", "white")
             .style("color", "blue")
             .style("opacity", 2)
-            .html("<b>Flight Search: " + d.value)
+            .html("<b>Date: " + moment(d.date).format("DD-MMM-YYYY")
+              + '<br>' + "<b>Flight Search: " + d.value)
             .style("left", 200 + "px")
             .style("top", 880 + "px");
         })
@@ -816,7 +819,8 @@
             .style("background", "white")
             .style("color", "red")
             .style("opacity", 2)
-            .html("<b>Hotel Search: " + d.value2)
+            .html("<b>Date: " + moment(d.date).format("DD-MMM-YYYY")
+              + '<br>' + "Hotel Search: " + d.value2)
             .style("left", 200 + "px")
             .style("top", 880 + "px");
         })
